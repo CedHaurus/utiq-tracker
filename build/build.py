@@ -642,9 +642,13 @@ def main():
     for r in recs:
         r["_fav"] = have.get(r["domain"], False)
 
-    # reset public/
-    if os.path.exists(PUB):
-        shutil.rmtree(PUB)
+    # reset public/ : on vide le contenu sans supprimer le dossier lui-même,
+    # pour préserver l'inode du bind-mount Docker (sinon le conteneur nginx sert
+    # un dossier fantôme tant qu'on ne le redémarre pas).
+    os.makedirs(PUB, exist_ok=True)
+    for entry in os.listdir(PUB):
+        q = os.path.join(PUB, entry)
+        shutil.rmtree(q) if os.path.isdir(q) else os.remove(q)
     os.makedirs(os.path.join(PUB, "assets", "favicons"), exist_ok=True)
     os.makedirs(os.path.join(PUB, "en"), exist_ok=True)
     os.makedirs(os.path.join(PUB, "blocklists"), exist_ok=True)
