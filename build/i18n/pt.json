@@ -1,0 +1,133 @@
+{
+  "lang": "pt",
+  "name": "Português",
+  "tagline": "Um índice de sites e plataformas em todo o mundo que utilizam o Utiq.",
+  "slogan": "Sorria, está a ser rastreado.",
+  "intro_html": "<strong>Utiq</strong> é um rastreador publicitário criado por quatro gigantes das telecomunicações (Deutsche Telekom, Orange, Telefónica, Vodafone) que transforma o seu operador num rastreador: a sua ligação móvel ou fixa — o seu número, a sua assinatura — torna-se um identificador publicitário que o segue de site em site, de navegador em navegador e de dispositivo em dispositivo, algo que nem a navegação privada nem a limpeza dos cookies conseguem travar. <strong>O senão: já não é um site a rastreá-lo, é o seu próprio fornecedor de internet a vender a sua identidade aos anunciantes.</strong>",
+  "meta_desc": "Saiba quem o rastreia através do seu operador de telecomunicações e como recusar. O Utiq Tracker lista os sites que usam o Utiq, o rastreador publicitário dos operadores, em França e no mundo. Lista e dados abertos.",
+  "ui": {
+    "nav_list": "O índice",
+    "nav_faq": "FAQ Utiq",
+    "nav_about": "Sobre o Utiq",
+    "nav_optout": "Recusar",
+    "search_ph": "Pesquisar um site, um domínio, uma palavra-chave…",
+    "filter_scope": "Âmbito",
+    "scope_all": "Todos",
+    "scope_fr": "França",
+    "scope_world": "Mundo",
+    "filter_cat": "Categoria",
+    "cat_all": "Todas as categorias",
+    "filter_country": "País / edição",
+    "country_all": "Todos os países",
+    "results_many": "sites listados",
+    "reset": "Repor",
+    "see_more": "Mostrar mais",
+    "see_more_rest": "Mostrar mais ({n} restantes)",
+    "card_since": "Utiq desde",
+    "card_go": "Visitar site",
+    "no_results": "Nenhum site corresponde à sua pesquisa.",
+    "downloads": "Descarregar a lista",
+    "dl_json": "JSON",
+    "dl_csv": "CSV",
+    "api_link": "Acesso à API (JSON)",
+    "non_exhaustive": "Lista não exaustiva, sujeita a alterações.",
+    "disclaimer": "Este é um projeto independente. Não tem qualquer afiliação com a Utiq SA/NV, os seus operadores fundadores, nem com qualquer das marcas mencionadas. As informações são fornecidas apenas para fins informativos.",
+    "footer_by": "Criado por",
+    "footer_legal": "Aviso legal",
+    "back_home": "← Voltar à página inicial",
+    "learn_more": "Saber mais",
+    "faq_title": "FAQ Utiq",
+    "faq_intro": "Tudo sobre o Utiq: o que é, como o rastreia, como recusar.",
+    "about_title": "Sobre o Utiq",
+    "api_title": "Acesso aos dados (API JSON)"
+  },
+  "faq": [
+    [
+      "Como recuso o Utiq?",
+      "<p>A forma mais direta é o <strong>Consent Hub</strong> oficial do Utiq: <a href='{consent}' target='_blank' rel='noopener'>consenthub.utiq.com</a>. Clique em “Manage Utiq consents”, depois em “Withdraw Utiq consents” e escolha <strong>“Remove all Utiq consents”</strong>. Os seus consentimentos são eliminados e a tecnologia deixa de estar ativa. A Utiq afirma que os dados associados são apagados da sua plataforma <strong>no prazo de 24 horas</strong>, desde que não conceda um novo consentimento entretanto.</p><p>Também pode retirar o consentimento site a site através da ligação “Manage Utiq” no rodapé dos sites participantes (aplica-se apenas a esse site).</p>"
+    ],
+    [
+      "Como me posso proteger do Utiq?",
+      "<ul><li><strong>Recuse o banner.</strong> Quando um site pede consentimento Utiq, escolha “Recusar”. Sem consentimento, a tecnologia permanece inativa.</li><li><strong>Bloqueie os domínios Utiq</strong> ao nível do DNS ou do navegador. O rastreamento assenta em domínios técnicos (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, subdomínios <code>utiq.&lt;site&gt;</code>). Estão disponíveis listas de bloqueio prontas a usar mais abaixo.</li><li><strong>Use um DNS de filtragem</strong> (AdGuard Home, NextDNS, Pi-hole) ou um bloqueador de conteúdos (uBlock Origin) com estas listas.</li><li><strong>No telemóvel</strong>, o identificador deriva da ligação do operador: usar uma VPN ou uma rede não participante limita a associação à rede, mas não substitui a retirada do consentimento.</li></ul><p class='faq-dl'><strong>Listas de bloqueio Utiq para descarregar:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>domínios</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>versões “strict” e índice</a>).</p>"
+    ],
+    [
+      "O que é exatamente o Utiq?",
+      "<p>O Utiq é uma empresa (resultante de uma joint venture entre a Deutsche Telekom, a Orange, a Telefónica e a Vodafone, lançada em 2023) que oferece uma tecnologia de identificação publicitária baseada nas redes dos operadores. Em vez de instalar um cookie no seu navegador, assenta num <strong>“network signal”</strong> fornecido pelo seu operador para gerar identificadores pseudónimos (martechpass, adtechpass) usados por marcas e redes publicitárias para segmentação e medição.</p>"
+    ],
+    [
+      "Como funciona o Utiq tecnicamente?",
+      "<p>Quando aceita num site participante, o SDK do Utiq faz uma chamada segura ao seu operador, que devolve um <em>network signal</em> correspondente à sua ligação. Esse sinal é mapeado para um identificador aleatório estável (o <em>consentpass</em>), a partir do qual são derivados os identificadores expostos aos anunciantes. Estes sinais funcionam <strong>entre navegadores e entre dispositivos</strong> na mesma ligação, permitindo a reidentificação em larga escala.</p>"
+    ],
+    [
+      "Que operadores e países estão envolvidos?",
+      "<p>Os operadores fundadores são a Deutsche Telekom, a Orange, a Telefónica e a Vodafone, aos quais se juntaram outros. A implementação é maioritariamente europeia (Alemanha, França, Espanha, Reino Unido, Itália, Áustria…). A distribuição dos sites aqui listados reflete esse âmbito.</p>"
+    ],
+    [
+      "Como é que este site deteta os sites que usam Utiq?",
+      "<p>O índice cruza vários sinais públicos: registos DNS que apontam para a infraestrutura Utiq (<code>*.utiq-aws.net</code>), certificados TLS emitidos para subdomínios <code>utiq.&lt;site&gt;</code> (registos de Certificate Transparency) e uma verificação de que o <em>loader</em> Utiq responde efetivamente no domínio. A data “Utiq desde” é <strong>estimada</strong> (primeiro vestígio público conhecido) e o país é uma estimativa da edição de mercado, não uma sede legal.</p>"
+    ],
+    [
+      "A lista é exaustiva?",
+      "<p><strong>Não.</strong> É um instantâneo, não exaustivo e sujeito a alterações. Os sites podem adotar ou abandonar o Utiq a qualquer momento. A lista é fornecida apenas para fins informativos.</p>"
+    ],
+    [
+      "Posso reutilizar os dados?",
+      "<p>Sim. A lista é exportável em <a href='{data_json}'>JSON</a> e <a href='{data_csv}'>CSV</a>, e um acesso estável à API está documentado na <a href='{api}'>página da API</a> (com CORS, para uso externo).</p>"
+    ]
+  ],
+  "about_html": "<h3 class='pix'>O que é o Utiq?</h3><p><strong>Utiq</strong> é um rastreador publicitário criado por quatro gigantes das telecomunicações (Deutsche Telekom, Orange, Telefónica, Vodafone) que transforma o seu operador num rastreador: a sua ligação móvel ou fixa — o seu número, a sua assinatura — torna-se um identificador publicitário que o segue de site em site, de navegador em navegador e de dispositivo em dispositivo.</p><p>Lançado em 2023, o Utiq apresenta-se como um serviço de consentimento “autêntico” para o rastreamento publicitário operado pelas telecomunicações. Na prática, o seu operador torna-se a ligação entre a sua identidade de assinante e a sua navegação, exatamente onde as redes publicitárias perdiam visibilidade com o fim dos cookies de terceiros.</p><h3 class='pix'>Porque é um problema?</h3><p>O rastreamento ocorre <strong>ao nível da rede</strong>, independentemente do navegador ou do dispositivo, e sobrevive à limpeza dos cookies ou à navegação privada. Assenta no consentimento, mas esse consentimento é muitas vezes pedido através de banners ambíguos, por vezes na modalidade “consentir ou pagar”.</p><h3 class='pix'>Metodologia</h3><p>O índice cruza sinais públicos: registos DNS que apontam para a infraestrutura Utiq (<code>*.utiq-aws.net</code>), certificados TLS para subdomínios <code>utiq.&lt;site&gt;</code> (registos de Certificate Transparency) e uma verificação de que o <em>loader</em> Utiq responde no domínio. Até à data, estão listados <strong>{n} sites</strong>, incluindo <strong>{fr} em França</strong>. A data “Utiq desde” é estimada a partir do primeiro vestígio público conhecido.</p><p><strong>Lista não exaustiva, sujeita a alterações.</strong> Encontrou um erro? Um site a assinalar? Contacte <a href='{site}' target='_blank' rel='noopener'>Christophe Boutry</a>.</p><h3 class='pix'>Recusar / proteger-se</h3><p>Consulte as <a href='{faq}'>FAQ</a>: recuse através do <a href='{consent}' target='_blank' rel='noopener'>Consent Hub do Utiq</a> e das listas de bloqueio DNS para descarregar.</p>",
+  "legal": {
+    "title": "Aviso legal",
+    "html": "<h3 class='pix'>Editor</h3><p>O site <strong>utiq-tracker.online</strong> é editado por <strong>Christophe Boutry</strong>, sediado em Paris (75012), França. Contacto: através de <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p><h3 class='pix'>Diretor de publicação</h3><p>Christophe Boutry.</p><h3 class='pix'>Alojamento</h3><p>O site está alojado num servidor dedicado da OVH SAS, 2 rue Kellermann, 59100 Roubaix, França (<a href='https://www.ovhcloud.com' target='_blank' rel='noopener'>ovhcloud.com</a>).</p><h3 class='pix'>Finalidade e independência</h3><p>O Utiq Tracker é um projeto independente e informativo que lista sites que usam a tecnologia Utiq com base em sinais técnicos públicos. <strong>Este site não tem qualquer afiliação com a Utiq SA/NV, os seus operadores fundadores (Deutsche Telekom, Orange, Telefónica, Vodafone), nem com qualquer das marcas mencionadas.</strong> As marcas registadas e os nomes pertencem aos respetivos titulares. A lista é não exaustiva, sujeita a alterações e fornecida sem garantia de exatidão.</p><h3 class='pix'>Propriedade intelectual</h3><p>A estrutura do site, os textos originais e o código pertencem ao editor. Os dados do índice são disponibilizados sob a licença <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>.</p><h3 class='pix'>Dados pessoais &amp; cookies</h3><p>Este site não instala <strong>quaisquer cookies de rastreamento</strong> e não recolhe dados pessoais identificáveis. Não é carregado nenhum rastreador de terceiros; os favicons são alojados localmente e não é carregado nenhum tipo de letra web externo (tipografia do sistema). Qualquer tratamento de dados rege-se pelo RGPD (regulamento UE 2016/679).</p><h3 class='pix'>Comunicação de erros</h3><p>Para comunicar um erro ou solicitar a remoção, contacte o editor através de <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p>"
+  },
+  "api": {
+    "intro_html": "Os dados do Utiq Tracker são livremente reutilizáveis (licença <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>, por favor atribua o crédito a “Utiq Tracker”). O endpoint abaixo é estável, só de leitura, e servido com o cabeçalho <code>Access-Control-Allow-Origin: *</code> (CORS) para uso direto a partir do navegador.",
+    "endpoint_label": "Endpoint estável",
+    "fields_label": "Campos",
+    "notes_html": "<p>O conjunto de dados contém <strong>{n} entradas</strong>. Resposta: um objeto <code>meta</code> (geração, total, fonte, licença) + um array <code>sites</code>. Atualizado ocasionalmente. <strong>Lista não exaustiva.</strong></p>"
+  },
+  "categories": {
+    "general": "Geral / outros",
+    "news": "Notícias & media",
+    "sport": "Desporto",
+    "auto": "Automóvel",
+    "culture": "Cultura & entretenimento",
+    "tech": "Tecnologia",
+    "jobs": "Emprego & formação",
+    "audio": "Rádio & áudio",
+    "lifestyle": "Estilo de vida",
+    "retail": "Comércio & compras",
+    "finance": "Finanças & economia",
+    "home": "Casa & imobiliário",
+    "travel": "Viagens & turismo",
+    "health": "Saúde & bem-estar",
+    "technical": "Técnico / teste",
+    "food": "Alimentação & culinária",
+    "security": "Segurança",
+    "animals": "Animais"
+  },
+  "countries": {
+    "FR": "França",
+    "DE": "Alemanha",
+    "ES": "Espanha",
+    "GB": "Reino Unido",
+    "IT": "Itália",
+    "US": "Estados Unidos",
+    "AT": "Áustria",
+    "CA": "Canadá",
+    "PL": "Polónia",
+    "EU": "União Europeia",
+    "DK": "Dinamarca",
+    "MC": "Mónaco",
+    "PT": "Portugal",
+    "CH": "Suíça",
+    "SE": "Suécia",
+    "INT": "Internacional / indeterminado"
+  },
+  "og": {
+    "l1": "O diretório aberto dos sites que o rastreiam",
+    "l2": "pelo seu operador. E como recusar.",
+    "slogan": "« Sorria, está a ser rastreado. »",
+    "stat": "{n} sites listados · {fr} em França"
+  }
+}

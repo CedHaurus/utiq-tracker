@@ -1,0 +1,133 @@
+{
+  "lang": "en",
+  "name": "English",
+  "tagline": "An index of websites and platforms around the world that use Utiq.",
+  "slogan": "Smile, you’re being tracked.",
+  "intro_html": "<strong>Utiq</strong> is an advertising tracker built by four telecom giants (Deutsche Telekom, Orange, Telefónica, Vodafone) that turns your carrier into a tracker: your mobile or fixed connection — your number, your subscription — becomes an advertising ID that follows you from site to site, browser to browser and device to device, which neither private browsing nor clearing your cookies can stop. <strong>The catch: it’s no longer a website tracking you, it’s your own internet provider selling your identity to advertisers.</strong>",
+  "meta_desc": "Know who tracks you through your telecom operator, and how to opt out. Utiq Tracker lists the sites using Utiq, the operators’ advertising tracker, in France and worldwide. Open list and data.",
+  "ui": {
+    "nav_list": "The index",
+    "nav_faq": "Utiq FAQ",
+    "nav_about": "About Utiq",
+    "nav_optout": "Opt out",
+    "search_ph": "Search a site, a domain, a keyword…",
+    "filter_scope": "Scope",
+    "scope_all": "All",
+    "scope_fr": "France",
+    "scope_world": "World",
+    "filter_cat": "Category",
+    "cat_all": "All categories",
+    "filter_country": "Country / edition",
+    "country_all": "All countries",
+    "results_many": "sites listed",
+    "reset": "Reset",
+    "see_more": "Show more",
+    "see_more_rest": "Show more ({n} remaining)",
+    "card_since": "Utiq since",
+    "card_go": "Visit site",
+    "no_results": "No site matches your search.",
+    "downloads": "Download the list",
+    "dl_json": "JSON",
+    "dl_csv": "CSV",
+    "api_link": "API access (JSON)",
+    "non_exhaustive": "Non-exhaustive list, subject to change.",
+    "disclaimer": "This is an independent project. It is not affiliated with Utiq SA/NV, its founding operators, or any of the brands mentioned. Information is provided for informational purposes only.",
+    "footer_by": "Built by",
+    "footer_legal": "Legal notice",
+    "back_home": "← Back to home",
+    "learn_more": "Learn more",
+    "faq_title": "Utiq FAQ",
+    "faq_intro": "Everything about Utiq: what it is, how it tracks you, how to opt out.",
+    "about_title": "About Utiq",
+    "api_title": "Data access (JSON API)"
+  },
+  "faq": [
+    [
+      "How do I opt out of Utiq?",
+      "<p>The most direct way is Utiq’s official <strong>Consent Hub</strong>: <a href='{consent}' target='_blank' rel='noopener'>consenthub.utiq.com</a>. Click “Manage Utiq consents”, then “Withdraw Utiq consents” and choose <strong>“Remove all Utiq consents”</strong>. Your consents are deleted and the technology stops being active. Utiq states that the associated data is erased from its platform <strong>within 24 hours</strong>, as long as you don’t grant new consent in the meantime.</p><p>You can also withdraw consent site by site via the “Manage Utiq” link in the footer of participating websites (this only applies to that site).</p>"
+    ],
+    [
+      "How can I protect myself from Utiq?",
+      "<ul><li><strong>Reject the banner.</strong> When a site asks for Utiq consent, choose “Reject”. Without consent, the technology stays inactive.</li><li><strong>Block Utiq domains</strong> at the DNS or browser level. Tracking relies on technical domains (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code> subdomains). Ready-made blocklists are downloadable below.</li><li><strong>Use a filtering DNS</strong> (AdGuard Home, NextDNS, Pi-hole) or a content blocker (uBlock Origin) with these lists.</li><li><strong>On mobile</strong>, the identifier derives from your carrier connection: using a VPN or a non-participating network limits the network binding, but does not replace withdrawing consent.</li></ul><p class='faq-dl'><strong>Utiq blocklists to download:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>domains</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>“strict” versions and index</a>).</p>"
+    ],
+    [
+      "What exactly is Utiq?",
+      "<p>Utiq is a company (spun out of a joint venture between Deutsche Telekom, Orange, Telefónica and Vodafone, launched in 2023) offering an advertising identification technology based on operator networks. Rather than dropping a cookie in your browser, it relies on a <strong>“network signal”</strong> provided by your carrier to generate pseudonymous identifiers (martechpass, adtechpass) used by brands and ad networks for targeting and measurement.</p>"
+    ],
+    [
+      "How does Utiq work technically?",
+      "<p>When you accept on a participating site, the Utiq SDK makes a secure call to your operator, which returns a <em>network signal</em> matching your connection. That signal is mapped to a stable random identifier (the <em>consentpass</em>), from which the identifiers exposed to advertisers are derived. These signals work <strong>cross-browser and cross-device</strong> over the same connection, enabling re-identification at scale.</p>"
+    ],
+    [
+      "Which operators and countries are involved?",
+      "<p>The founding operators are Deutsche Telekom, Orange, Telefónica and Vodafone, joined by others. Deployment is mostly European (Germany, France, Spain, United Kingdom, Italy, Austria…). The distribution of the sites listed here reflects that scope.</p>"
+    ],
+    [
+      "How does this site detect websites using Utiq?",
+      "<p>The index cross-references several public signals: DNS records pointing to Utiq infrastructure (<code>*.utiq-aws.net</code>), TLS certificates issued for <code>utiq.&lt;site&gt;</code> subdomains (Certificate Transparency logs), and a check that the Utiq <em>loader</em> actually responds on the domain. The “Utiq since” date is <strong>estimated</strong> (earliest known public trace) and the country is an estimate of the market edition, not a legal headquarters.</p>"
+    ],
+    [
+      "Is the list exhaustive?",
+      "<p><strong>No.</strong> It is a snapshot, non-exhaustive and subject to change. Sites may adopt or drop Utiq at any time. The list is provided for informational purposes.</p>"
+    ],
+    [
+      "Can I reuse the data?",
+      "<p>Yes. The list is exportable as <a href='{data_json}'>JSON</a> and <a href='{data_csv}'>CSV</a>, and a stable API access is documented on the <a href='{api}'>API page</a> (with CORS, for external use).</p>"
+    ]
+  ],
+  "about_html": "<h3 class='pix'>What is Utiq?</h3><p><strong>Utiq</strong> is an advertising tracker built by four telecom giants (Deutsche Telekom, Orange, Telefónica, Vodafone) that turns your carrier into a tracker: your mobile or fixed connection — your number, your subscription — becomes an advertising ID that follows you from site to site, browser to browser and device to device.</p><p>Launched in 2023, Utiq presents itself as an “authentic” consent service for telecom-operated advertising tracking. In practice, your carrier becomes the link between your subscriber identity and your browsing, exactly where ad networks were losing visibility with the end of third-party cookies.</p><h3 class='pix'>Why is it a problem?</h3><p>Tracking happens <strong>at the network level</strong>, independent of the browser or device, and survives clearing cookies or private browsing. It relies on consent, but that consent is often requested through ambiguous banners, sometimes as “consent or pay”.</p><h3 class='pix'>Methodology</h3><p>The index cross-references public signals: DNS records pointing to Utiq infrastructure (<code>*.utiq-aws.net</code>), TLS certificates for <code>utiq.&lt;site&gt;</code> subdomains (Certificate Transparency logs), and a check that the Utiq <em>loader</em> responds on the domain. To date, <strong>{n} sites</strong> are listed, including <strong>{fr} in France</strong>. The “Utiq since” date is estimated from the earliest known public trace.</p><p><strong>Non-exhaustive list, subject to change.</strong> Found an error? A site to report? Contact <a href='{site}' target='_blank' rel='noopener'>Christophe Boutry</a>.</p><h3 class='pix'>Opt out / protect yourself</h3><p>See the <a href='{faq}'>FAQ</a>: opt out via the <a href='{consent}' target='_blank' rel='noopener'>Utiq Consent Hub</a> and downloadable DNS blocklists.</p>",
+  "legal": {
+    "title": "Legal notice",
+    "html": "<h3 class='pix'>Publisher</h3><p>The site <strong>utiq-tracker.online</strong> is published by <strong>Christophe Boutry</strong>, based in Paris (75012), France. Contact: via <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p><h3 class='pix'>Publication director</h3><p>Christophe Boutry.</p><h3 class='pix'>Hosting</h3><p>The site is hosted on a dedicated OVH SAS server, 2 rue Kellermann, 59100 Roubaix, France (<a href='https://www.ovhcloud.com' target='_blank' rel='noopener'>ovhcloud.com</a>).</p><h3 class='pix'>Purpose and independence</h3><p>Utiq Tracker is an independent, informational project that lists websites using the Utiq technology based on public technical signals. <strong>This site is not affiliated with Utiq SA/NV, its founding operators (Deutsche Telekom, Orange, Telefónica, Vodafone), or any of the brands mentioned.</strong> Trademarks and names belong to their respective owners. The list is non-exhaustive, subject to change, and provided without warranty of accuracy.</p><h3 class='pix'>Intellectual property</h3><p>The site structure, original texts and code belong to the publisher. The index data is made available under the <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a> license.</p><h3 class='pix'>Personal data &amp; cookies</h3><p>This site sets <strong>no tracking cookies</strong> and collects no identifiable personal data. No third-party tracker is loaded; favicons are self-hosted and no external web font is loaded (system typography). Any data processing is governed by the GDPR (EU regulation 2016/679).</p><h3 class='pix'>Reporting</h3><p>To report an error or request removal, contact the publisher via <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p>"
+  },
+  "api": {
+    "intro_html": "Utiq Tracker data is freely reusable (license <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>, please credit “Utiq Tracker”). The endpoint below is stable, read-only, and served with the <code>Access-Control-Allow-Origin: *</code> header (CORS) for direct use from the browser.",
+    "endpoint_label": "Stable endpoint",
+    "fields_label": "Fields",
+    "notes_html": "<p>The dataset holds <strong>{n} entries</strong>. Response: a <code>meta</code> object (generation, total, source, license) + a <code>sites</code> array. Updated occasionally. <strong>Non-exhaustive list.</strong></p>"
+  },
+  "categories": {
+    "general": "General / other",
+    "news": "News & media",
+    "sport": "Sports",
+    "auto": "Automotive",
+    "culture": "Culture & entertainment",
+    "tech": "Technology",
+    "jobs": "Jobs & training",
+    "audio": "Radio & audio",
+    "lifestyle": "Lifestyle",
+    "retail": "Retail & shopping",
+    "finance": "Finance & economy",
+    "home": "Home & real estate",
+    "travel": "Travel & tourism",
+    "health": "Health & wellness",
+    "technical": "Technical / test",
+    "food": "Food & cooking",
+    "security": "Security",
+    "animals": "Animals"
+  },
+  "countries": {
+    "FR": "France",
+    "DE": "Germany",
+    "ES": "Spain",
+    "GB": "United Kingdom",
+    "IT": "Italy",
+    "US": "United States",
+    "AT": "Austria",
+    "CA": "Canada",
+    "PL": "Poland",
+    "EU": "European Union",
+    "DK": "Denmark",
+    "MC": "Monaco",
+    "PT": "Portugal",
+    "CH": "Switzerland",
+    "SE": "Sweden",
+    "INT": "International / undetermined"
+  },
+  "og": {
+    "l1": "The open directory of sites that track you",
+    "l2": "via your telecom operator. And how to opt out.",
+    "slogan": "« Smile, you’re being tracked. »",
+    "stat": "{n} sites listed · {fr} in France"
+  }
+}

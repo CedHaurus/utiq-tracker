@@ -45,9 +45,20 @@ a:hover{text-decoration:underline}
 .nav a:hover{border-color:var(--ink);text-decoration:none;background:var(--cream)}
 .nav a.cta{background:var(--orange);color:#fff;border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
 .nav a.cta:hover{background:var(--orange-d)}
-.lang-btn{font-family:var(--mono);font-size:11px;border:2px solid var(--ink);background:var(--paper);
-  color:var(--ink);padding:7px 10px;border-radius:var(--radius);cursor:pointer}
-.lang-btn:hover{background:var(--ink);color:var(--cream-2)}
+.langmenu{position:relative}
+.langmenu>summary{list-style:none;cursor:pointer;font-family:var(--mono);font-weight:700;font-size:12px;
+  text-transform:uppercase;letter-spacing:.3px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);
+  padding:7px 10px;border-radius:var(--radius);display:inline-flex;gap:6px;align-items:center}
+.langmenu>summary::-webkit-details-marker{display:none}
+.langmenu>summary::marker{content:""}
+.langmenu[open]>summary{background:var(--ink);color:var(--cream-2)}
+.langmenu-list{position:absolute;right:0;top:calc(100% + 6px);z-index:60;background:var(--paper);
+  border:2px solid var(--ink);border-radius:var(--radius);box-shadow:var(--shadow);min-width:168px;
+  max-height:64vh;overflow:auto;display:flex;flex-direction:column}
+.langmenu-list a{padding:9px 14px;font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid #e9dfc6}
+.langmenu-list a:last-child{border-bottom:0}
+.langmenu-list a:hover{background:var(--cream);text-decoration:none}
+.langmenu-list a[aria-current="true"]{color:var(--orange-d);font-weight:700;background:var(--cream-2)}
 
 /* ---------- Hero ---------- */
 .hero{padding:34px 0 10px}

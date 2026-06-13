@@ -1,0 +1,133 @@
+{
+  "lang": "de",
+  "name": "Deutsch",
+  "tagline": "Ein Verzeichnis von Websites und Plattformen weltweit, die Utiq einsetzen.",
+  "slogan": "Lächeln, Sie werden getrackt.",
+  "intro_html": "<strong>Utiq</strong> ist ein Werbe-Tracker, entwickelt von vier Telekommunikationsriesen (Deutsche Telekom, Orange, Telefónica, Vodafone), der Ihren Provider in einen Tracker verwandelt: Ihr Mobilfunk- oder Festnetzanschluss — Ihre Nummer, Ihr Vertrag — wird zu einer Werbe-ID, die Ihnen von Website zu Website, von Browser zu Browser und von Gerät zu Gerät folgt, und das kann weder der private Modus noch das Löschen Ihrer Cookies verhindern. <strong>Der Haken: Es ist nicht mehr eine Website, die Sie trackt, es ist Ihr eigener Internetanbieter, der Ihre Identität an Werbetreibende verkauft.</strong>",
+  "meta_desc": "Erfahren Sie, wer Sie über Ihren Telekommunikationsanbieter trackt und wie Sie sich abmelden. Utiq Tracker listet die Websites auf, die Utiq nutzen, den Werbe-Tracker der Netzbetreiber, in Frankreich und weltweit. Offene Liste und Daten.",
+  "ui": {
+    "nav_list": "Das Verzeichnis",
+    "nav_faq": "Utiq-FAQ",
+    "nav_about": "Über Utiq",
+    "nav_optout": "Abmelden",
+    "search_ph": "Website, Domain oder Stichwort suchen…",
+    "filter_scope": "Bereich",
+    "scope_all": "Alle",
+    "scope_fr": "Frankreich",
+    "scope_world": "Welt",
+    "filter_cat": "Kategorie",
+    "cat_all": "Alle Kategorien",
+    "filter_country": "Land / Ausgabe",
+    "country_all": "Alle Länder",
+    "results_many": "gelistete Websites",
+    "reset": "Zurücksetzen",
+    "see_more": "Mehr anzeigen",
+    "see_more_rest": "Mehr anzeigen ({n} verbleibend)",
+    "card_since": "Utiq seit",
+    "card_go": "Website besuchen",
+    "no_results": "Keine Website entspricht Ihrer Suche.",
+    "downloads": "Liste herunterladen",
+    "dl_json": "JSON",
+    "dl_csv": "CSV",
+    "api_link": "API-Zugang (JSON)",
+    "non_exhaustive": "Nicht vollständige Liste, Änderungen vorbehalten.",
+    "disclaimer": "Dies ist ein unabhängiges Projekt. Es steht in keiner Verbindung zu Utiq SA/NV, seinen Gründungsbetreibern oder den genannten Marken. Die Informationen dienen ausschließlich zu Informationszwecken.",
+    "footer_by": "Erstellt von",
+    "footer_legal": "Impressum",
+    "back_home": "← Zurück zur Startseite",
+    "learn_more": "Mehr erfahren",
+    "faq_title": "Utiq-FAQ",
+    "faq_intro": "Alles über Utiq: was es ist, wie es Sie trackt, wie Sie sich abmelden.",
+    "about_title": "Über Utiq",
+    "api_title": "Datenzugang (JSON-API)"
+  },
+  "faq": [
+    [
+      "Wie melde ich mich bei Utiq ab?",
+      "<p>Der direkteste Weg ist der offizielle <strong>Consent Hub</strong> von Utiq: <a href='{consent}' target='_blank' rel='noopener'>consenthub.utiq.com</a>. Klicken Sie auf „Utiq-Einwilligungen verwalten“, dann auf „Utiq-Einwilligungen widerrufen“ und wählen Sie <strong>„Alle Utiq-Einwilligungen entfernen“</strong>. Ihre Einwilligungen werden gelöscht und die Technologie ist nicht mehr aktiv. Utiq gibt an, dass die zugehörigen Daten <strong>innerhalb von 24 Stunden</strong> von der Plattform gelöscht werden, sofern Sie in der Zwischenzeit keine neue Einwilligung erteilen.</p><p>Sie können die Einwilligung auch Website für Website über den Link „Utiq verwalten“ in der Fußzeile teilnehmender Websites widerrufen (dies gilt nur für die jeweilige Website).</p>"
+    ],
+    [
+      "Wie kann ich mich vor Utiq schützen?",
+      "<ul><li><strong>Lehnen Sie das Banner ab.</strong> Wenn eine Website um die Utiq-Einwilligung bittet, wählen Sie „Ablehnen“. Ohne Einwilligung bleibt die Technologie inaktiv.</li><li><strong>Blockieren Sie Utiq-Domains</strong> auf DNS- oder Browser-Ebene. Das Tracking stützt sich auf technische Domains (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code>-Subdomains). Fertige Blocklisten können unten heruntergeladen werden.</li><li><strong>Nutzen Sie einen filternden DNS</strong> (AdGuard Home, NextDNS, Pi-hole) oder einen Inhaltsblocker (uBlock Origin) mit diesen Listen.</li><li><strong>Auf dem Smartphone</strong> leitet sich die Kennung von Ihrer Mobilfunkverbindung ab: Die Nutzung eines VPN oder eines nicht teilnehmenden Netzwerks schränkt die Netzwerkbindung ein, ersetzt aber nicht den Widerruf der Einwilligung.</li></ul><p class='faq-dl'><strong>Utiq-Blocklisten zum Herunterladen:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>Domains</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>„strenge“ Versionen und Index</a>).</p>"
+    ],
+    [
+      "Was genau ist Utiq?",
+      "<p>Utiq ist ein Unternehmen (entstanden aus einem Joint Venture zwischen Deutsche Telekom, Orange, Telefónica und Vodafone, gestartet 2023), das eine Werbe-Identifizierungstechnologie auf Basis von Betreibernetzen anbietet. Statt ein Cookie in Ihrem Browser zu setzen, stützt es sich auf ein <strong>„Netzwerksignal“</strong>, das Ihr Anbieter bereitstellt, um pseudonyme Kennungen (martechpass, adtechpass) zu erzeugen, die von Marken und Werbenetzwerken zur Zielgruppenansprache und Messung verwendet werden.</p>"
+    ],
+    [
+      "Wie funktioniert Utiq technisch?",
+      "<p>Wenn Sie auf einer teilnehmenden Website zustimmen, stellt das Utiq-SDK eine sichere Anfrage an Ihren Netzbetreiber, der ein <em>Netzwerksignal</em> passend zu Ihrer Verbindung zurückgibt. Dieses Signal wird einer stabilen Zufallskennung (dem <em>consentpass</em>) zugeordnet, aus der die den Werbetreibenden zugänglichen Kennungen abgeleitet werden. Diese Signale funktionieren <strong>browser- und geräteübergreifend</strong> über dieselbe Verbindung und ermöglichen so eine Wiedererkennung in großem Maßstab.</p>"
+    ],
+    [
+      "Welche Betreiber und Länder sind beteiligt?",
+      "<p>Die Gründungsbetreiber sind Deutsche Telekom, Orange, Telefónica und Vodafone, zu denen weitere hinzugekommen sind. Der Einsatz ist überwiegend europäisch (Deutschland, Frankreich, Spanien, Vereinigtes Königreich, Italien, Österreich…). Die Verteilung der hier gelisteten Websites spiegelt diesen Geltungsbereich wider.</p>"
+    ],
+    [
+      "Wie erkennt diese Website, welche Websites Utiq nutzen?",
+      "<p>Das Verzeichnis verknüpft mehrere öffentliche Signale: DNS-Einträge, die auf die Utiq-Infrastruktur verweisen (<code>*.utiq-aws.net</code>), TLS-Zertifikate, die für <code>utiq.&lt;site&gt;</code>-Subdomains ausgestellt wurden (Certificate-Transparency-Logs), und eine Prüfung, ob der Utiq-<em>Loader</em> auf der Domain tatsächlich antwortet. Das Datum „Utiq seit“ ist <strong>geschätzt</strong> (früheste bekannte öffentliche Spur) und das Land ist eine Schätzung der Marktausgabe, kein rechtlicher Firmensitz.</p>"
+    ],
+    [
+      "Ist die Liste vollständig?",
+      "<p><strong>Nein.</strong> Es handelt sich um eine Momentaufnahme, die nicht vollständig ist und Änderungen unterliegt. Websites können Utiq jederzeit einführen oder aufgeben. Die Liste dient zu Informationszwecken.</p>"
+    ],
+    [
+      "Darf ich die Daten weiterverwenden?",
+      "<p>Ja. Die Liste kann als <a href='{data_json}'>JSON</a> und <a href='{data_csv}'>CSV</a> exportiert werden, und ein stabiler API-Zugang ist auf der <a href='{api}'>API-Seite</a> dokumentiert (mit CORS, für die externe Nutzung).</p>"
+    ]
+  ],
+  "about_html": "<h3 class='pix'>Was ist Utiq?</h3><p><strong>Utiq</strong> ist ein Werbe-Tracker, entwickelt von vier Telekommunikationsriesen (Deutsche Telekom, Orange, Telefónica, Vodafone), der Ihren Provider in einen Tracker verwandelt: Ihr Mobilfunk- oder Festnetzanschluss — Ihre Nummer, Ihr Vertrag — wird zu einer Werbe-ID, die Ihnen von Website zu Website, von Browser zu Browser und von Gerät zu Gerät folgt.</p><p>2023 gestartet, präsentiert sich Utiq als „authentischer“ Einwilligungsdienst für das von Netzbetreibern betriebene Werbe-Tracking. In der Praxis wird Ihr Anbieter zum Bindeglied zwischen Ihrer Vertragsidentität und Ihrem Surfverhalten — genau dort, wo Werbenetzwerke mit dem Ende der Drittanbieter-Cookies ihren Einblick verloren.</p><h3 class='pix'>Warum ist das ein Problem?</h3><p>Das Tracking findet <strong>auf Netzwerkebene</strong> statt, unabhängig von Browser oder Gerät, und übersteht das Löschen von Cookies oder den privaten Modus. Es beruht auf Einwilligung, doch diese Einwilligung wird oft über mehrdeutige Banner eingeholt, manchmal nach dem Prinzip „Einwilligen oder zahlen“.</p><h3 class='pix'>Methodik</h3><p>Das Verzeichnis verknüpft öffentliche Signale: DNS-Einträge, die auf die Utiq-Infrastruktur verweisen (<code>*.utiq-aws.net</code>), TLS-Zertifikate für <code>utiq.&lt;site&gt;</code>-Subdomains (Certificate-Transparency-Logs) und eine Prüfung, ob der Utiq-<em>Loader</em> auf der Domain antwortet. Bislang sind <strong>{n} Websites</strong> gelistet, davon <strong>{fr} in Frankreich</strong>. Das Datum „Utiq seit“ wird aus der frühesten bekannten öffentlichen Spur geschätzt.</p><p><strong>Nicht vollständige Liste, Änderungen vorbehalten.</strong> Einen Fehler gefunden? Eine Website zu melden? Kontaktieren Sie <a href='{site}' target='_blank' rel='noopener'>Christophe Boutry</a>.</p><h3 class='pix'>Abmelden / sich schützen</h3><p>Siehe die <a href='{faq}'>FAQ</a>: Abmeldung über den <a href='{consent}' target='_blank' rel='noopener'>Utiq Consent Hub</a> und herunterladbare DNS-Blocklisten.</p>",
+  "legal": {
+    "title": "Impressum",
+    "html": "<h3 class='pix'>Herausgeber</h3><p>Die Website <strong>utiq-tracker.online</strong> wird herausgegeben von <strong>Christophe Boutry</strong> mit Sitz in Paris (75012), Frankreich. Kontakt: über <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p><h3 class='pix'>Verantwortlich für den Inhalt</h3><p>Christophe Boutry.</p><h3 class='pix'>Hosting</h3><p>Die Website wird auf einem dedizierten Server von OVH SAS gehostet, 2 rue Kellermann, 59100 Roubaix, Frankreich (<a href='https://www.ovhcloud.com' target='_blank' rel='noopener'>ovhcloud.com</a>).</p><h3 class='pix'>Zweck und Unabhängigkeit</h3><p>Utiq Tracker ist ein unabhängiges, informatives Projekt, das auf Basis öffentlicher technischer Signale Websites auflistet, die die Utiq-Technologie nutzen. <strong>Diese Website steht in keiner Verbindung zu Utiq SA/NV, ihren Gründungsbetreibern (Deutsche Telekom, Orange, Telefónica, Vodafone) oder den genannten Marken.</strong> Marken und Namen gehören ihren jeweiligen Eigentümern. Die Liste ist nicht vollständig, unterliegt Änderungen und wird ohne Gewähr für ihre Richtigkeit bereitgestellt.</p><h3 class='pix'>Geistiges Eigentum</h3><p>Die Struktur der Website, die Originaltexte und der Code gehören dem Herausgeber. Die Verzeichnisdaten werden unter der Lizenz <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a> bereitgestellt.</p><h3 class='pix'>Personenbezogene Daten &amp; Cookies</h3><p>Diese Website setzt <strong>keine Tracking-Cookies</strong> und erhebt keine identifizierbaren personenbezogenen Daten. Es wird kein Tracker von Drittanbietern geladen; Favicons werden selbst gehostet und es wird keine externe Webschriftart geladen (System-Typografie). Jegliche Datenverarbeitung unterliegt der DSGVO (EU-Verordnung 2016/679).</p><h3 class='pix'>Meldungen</h3><p>Um einen Fehler zu melden oder eine Entfernung zu beantragen, kontaktieren Sie den Herausgeber über <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p>"
+  },
+  "api": {
+    "intro_html": "Die Daten von Utiq Tracker sind frei weiterverwendbar (Lizenz <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>, bitte „Utiq Tracker“ nennen). Der untenstehende Endpunkt ist stabil, schreibgeschützt und wird mit dem Header <code>Access-Control-Allow-Origin: *</code> (CORS) für die direkte Nutzung aus dem Browser ausgeliefert.",
+    "endpoint_label": "Stabiler Endpunkt",
+    "fields_label": "Felder",
+    "notes_html": "<p>Der Datensatz enthält <strong>{n} Einträge</strong>. Antwort: ein <code>meta</code>-Objekt (Generierung, Gesamtzahl, Quelle, Lizenz) + ein <code>sites</code>-Array. Wird gelegentlich aktualisiert. <strong>Nicht vollständige Liste.</strong></p>"
+  },
+  "categories": {
+    "general": "Allgemein / Sonstiges",
+    "news": "Nachrichten & Medien",
+    "sport": "Sport",
+    "auto": "Automobil",
+    "culture": "Kultur & Unterhaltung",
+    "tech": "Technologie",
+    "jobs": "Jobs & Weiterbildung",
+    "audio": "Radio & Audio",
+    "lifestyle": "Lifestyle",
+    "retail": "Handel & Shopping",
+    "finance": "Finanzen & Wirtschaft",
+    "home": "Wohnen & Immobilien",
+    "travel": "Reisen & Tourismus",
+    "health": "Gesundheit & Wohlbefinden",
+    "technical": "Technisch / Test",
+    "food": "Essen & Kochen",
+    "security": "Sicherheit",
+    "animals": "Tiere"
+  },
+  "countries": {
+    "FR": "Frankreich",
+    "DE": "Deutschland",
+    "ES": "Spanien",
+    "GB": "Vereinigtes Königreich",
+    "IT": "Italien",
+    "US": "Vereinigte Staaten",
+    "AT": "Österreich",
+    "CA": "Kanada",
+    "PL": "Polen",
+    "EU": "Europäische Union",
+    "DK": "Dänemark",
+    "MC": "Monaco",
+    "PT": "Portugal",
+    "CH": "Schweiz",
+    "SE": "Schweden",
+    "INT": "International / unbestimmt"
+  },
+  "og": {
+    "l1": "Das offene Verzeichnis der Tracking-Websites",
+    "l2": "über Ihren Telekom-Anbieter. Und wie Sie sich abmelden.",
+    "slogan": "« Lächeln, Sie werden getrackt. »",
+    "stat": "{n} gelistete Websites · {fr} in Frankreich"
+  }
+}

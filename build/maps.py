@@ -1,45 +1,52 @@
 # -*- coding: utf-8 -*-
-"""Tables de correspondance (catégories, pays, drapeaux) et chaînes i18n."""
+"""Correspondances neutres (langue-indépendantes).
 
-# Catégorie source (FR) -> (clé stable, label EN)
-CATEGORIES = {
-    "Généraliste / autre":        ("general",   "General / other"),
-    "Actualités et médias":       ("news",      "News & media"),
-    "Sport":                      ("sport",     "Sports"),
-    "Automobile":                 ("auto",      "Automotive"),
-    "Culture et divertissement":  ("culture",   "Culture & entertainment"),
-    "Technologie":                ("tech",      "Technology"),
-    "Emploi et formation":        ("jobs",      "Jobs & training"),
-    "Radio et audio":             ("audio",     "Radio & audio"),
-    "Lifestyle":                  ("lifestyle", "Lifestyle"),
-    "Commerce et consommation":   ("retail",    "Retail & shopping"),
-    "Finance et économie":        ("finance",   "Finance & economy"),
-    "Maison et immobilier":       ("home",      "Home & real estate"),
-    "Voyage et tourisme":         ("travel",    "Travel & tourism"),
-    "Santé et bien-être":         ("health",    "Health & wellness"),
-    "Technique / test":           ("technical", "Technical / test"),
-    "Cuisine":                    ("food",      "Food & cooking"),
-    "Sécurité":                   ("security",  "Security"),
-    "Animaux":                    ("animals",   "Animals"),
-}
+Les LABELS traduits des catégories et des pays vivent dans build/i18n/<lang>.json
+(clés "categories" et "countries"). Ici on ne garde que :
+  - la catégorie source (FR, telle qu'écrite dans data/source.json) -> clé stable
+  - le pays source (FR) -> (code ISO, drapeau emoji)
+"""
 
-# Pays source (FR) -> (code, drapeau emoji, nom EN)
-COUNTRIES = {
-    "Allemagne":                   ("DE", "🇩🇪", "Germany"),
-    "France":                      ("FR", "🇫🇷", "France"),
-    "Espagne":                     ("ES", "🇪🇸", "Spain"),
-    "Royaume-Uni":                 ("GB", "🇬🇧", "United Kingdom"),
-    "Italie":                      ("IT", "🇮🇹", "Italy"),
-    "États-Unis":                  ("US", "🇺🇸", "United States"),
-    "Autriche":                    ("AT", "🇦🇹", "Austria"),
-    "Canada":                      ("CA", "🇨🇦", "Canada"),
-    "Pologne":                     ("PL", "🇵🇱", "Poland"),
-    "Union européenne":            ("EU", "🇪🇺", "European Union"),
-    "Danemark":                    ("DK", "🇩🇰", "Denmark"),
-    "Monaco":                      ("MC", "🇲🇨", "Monaco"),
-    "Portugal":                    ("PT", "🇵🇹", "Portugal"),
-    "Suisse":                      ("CH", "🇨🇭", "Switzerland"),
-    "Suède":                       ("SE", "🇸🇪", "Sweden"),
-    "International / indéterminé":  ("INT", "🌐", "International / undetermined"),
+# Catégorie source (FR, dans source.json) -> clé stable
+CAT_KEY = {
+    "Généraliste / autre":        "general",
+    "Actualités et médias":       "news",
+    "Sport":                      "sport",
+    "Automobile":                 "auto",
+    "Culture et divertissement":  "culture",
+    "Technologie":                "tech",
+    "Emploi et formation":        "jobs",
+    "Radio et audio":             "audio",
+    "Lifestyle":                  "lifestyle",
+    "Commerce et consommation":   "retail",
+    "Finance et économie":        "finance",
+    "Maison et immobilier":       "home",
+    "Voyage et tourisme":         "travel",
+    "Santé et bien-être":         "health",
+    "Technique / test":           "technical",
+    "Cuisine":                    "food",
+    "Sécurité":                   "security",
+    "Animaux":                    "animals",
 }
-COUNTRY_FALLBACK = ("INT", "🌐", "International / undetermined")
+CAT_FALLBACK = "general"
+
+# Pays source (FR) -> (code ISO, drapeau)
+COUNTRY_META = {
+    "Allemagne":                  ("DE", "🇩🇪"),
+    "France":                     ("FR", "🇫🇷"),
+    "Espagne":                    ("ES", "🇪🇸"),
+    "Royaume-Uni":                ("GB", "🇬🇧"),
+    "Italie":                     ("IT", "🇮🇹"),
+    "États-Unis":                 ("US", "🇺🇸"),
+    "Autriche":                   ("AT", "🇦🇹"),
+    "Canada":                     ("CA", "🇨🇦"),
+    "Pologne":                    ("PL", "🇵🇱"),
+    "Union européenne":           ("EU", "🇪🇺"),
+    "Danemark":                   ("DK", "🇩🇰"),
+    "Monaco":                     ("MC", "🇲🇨"),
+    "Portugal":                   ("PT", "🇵🇹"),
+    "Suisse":                     ("CH", "🇨🇭"),
+    "Suède":                      ("SE", "🇸🇪"),
+    "International / indéterminé": ("INT", "🌐"),
+}
+COUNTRY_FALLBACK = ("INT", "🌐")

@@ -80,12 +80,21 @@
     apply(true);
   });
 
-  // Mémorise la langue choisie via le bouton de bascule
-  var lang = document.getElementById("lang-toggle");
-  if (lang) lang.addEventListener("click", function () {
-    try { localStorage.setItem("utiq-lang", lang.getAttribute("data-target")); } catch (e) {}
-  });
-
   // état initial : n'afficher que les 30 premières
   apply(true);
+})();
+
+// Menu de langues : présent sur toutes les pages (hors IIFE de la grille)
+(function () {
+  "use strict";
+  document.querySelectorAll("a[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      try { localStorage.setItem("utiq-lang", a.getAttribute("data-lang")); } catch (e) {}
+    });
+  });
+  document.addEventListener("click", function (e) {
+    document.querySelectorAll("details.langmenu[open]").forEach(function (d) {
+      if (!d.contains(e.target)) d.removeAttribute("open");
+    });
+  });
 })();

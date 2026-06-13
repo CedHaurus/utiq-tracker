@@ -1,0 +1,133 @@
+{
+  "lang": "sv",
+  "name": "Svenska",
+  "tagline": "Ett index över webbplatser och plattformar i hela världen som använder Utiq.",
+  "slogan": "Le, du blir spårad.",
+  "intro_html": "<strong>Utiq</strong> är en reklamspårare byggd av fyra telekomjättar (Deutsche Telekom, Orange, Telefónica, Vodafone) som gör din operatör till en spårare: din mobila eller fasta uppkoppling — ditt nummer, ditt abonnemang — blir ett reklam-ID som följer dig från webbplats till webbplats, från webbläsare till webbläsare och från enhet till enhet, något som varken privat surfning eller rensning av cookies kan stoppa. <strong>Haken: det är inte längre en webbplats som spårar dig, det är din egen internetleverantör som säljer din identitet till annonsörer.</strong>",
+  "meta_desc": "Få veta vem som spårar dig via din teleoperatör, och hur du avregistrerar dig. Utiq Tracker listar de webbplatser som använder Utiq, operatörernas reklamspårare, i Frankrike och världen över. Öppen lista och öppna data.",
+  "ui": {
+    "nav_list": "Indexet",
+    "nav_faq": "Utiq FAQ",
+    "nav_about": "Om Utiq",
+    "nav_optout": "Avregistrera dig",
+    "search_ph": "Sök en webbplats, en domän, ett nyckelord…",
+    "filter_scope": "Omfattning",
+    "scope_all": "Alla",
+    "scope_fr": "Frankrike",
+    "scope_world": "Världen",
+    "filter_cat": "Kategori",
+    "cat_all": "Alla kategorier",
+    "filter_country": "Land / utgåva",
+    "country_all": "Alla länder",
+    "results_many": "listade webbplatser",
+    "reset": "Återställ",
+    "see_more": "Visa fler",
+    "see_more_rest": "Visa fler ({n} kvar)",
+    "card_since": "Utiq sedan",
+    "card_go": "Besök webbplatsen",
+    "no_results": "Ingen webbplats matchar din sökning.",
+    "downloads": "Ladda ner listan",
+    "dl_json": "JSON",
+    "dl_csv": "CSV",
+    "api_link": "API-åtkomst (JSON)",
+    "non_exhaustive": "Icke uttömmande lista, kan komma att ändras.",
+    "disclaimer": "Detta är ett oberoende projekt. Det är inte knutet till Utiq SA/NV, dess grundande operatörer eller något av de varumärken som nämns. Informationen tillhandahålls endast i informationssyfte.",
+    "footer_by": "Byggd av",
+    "footer_legal": "Juridisk information",
+    "back_home": "← Tillbaka till startsidan",
+    "learn_more": "Läs mer",
+    "faq_title": "Utiq FAQ",
+    "faq_intro": "Allt om Utiq: vad det är, hur det spårar dig, hur du avregistrerar dig.",
+    "about_title": "Om Utiq",
+    "api_title": "Dataåtkomst (JSON API)"
+  },
+  "faq": [
+    [
+      "Hur avregistrerar jag mig från Utiq?",
+      "<p>Det mest direkta sättet är Utiqs officiella <strong>Consent Hub</strong>: <a href='{consent}' target='_blank' rel='noopener'>consenthub.utiq.com</a>. Klicka på ”Manage Utiq consents”, sedan ”Withdraw Utiq consents” och välj <strong>”Remove all Utiq consents”</strong>. Dina samtycken raderas och tekniken slutar vara aktiv. Utiq uppger att de tillhörande uppgifterna raderas från plattformen <strong>inom 24 timmar</strong>, så länge du inte ger nytt samtycke under tiden.</p><p>Du kan också återkalla samtycke webbplats för webbplats via länken ”Manage Utiq” i sidfoten på deltagande webbplatser (detta gäller endast den webbplatsen).</p>"
+    ],
+    [
+      "Hur kan jag skydda mig mot Utiq?",
+      "<ul><li><strong>Avvisa bannern.</strong> När en webbplats ber om Utiq-samtycke, välj ”Avvisa”. Utan samtycke förblir tekniken inaktiv.</li><li><strong>Blockera Utiq-domäner</strong> på DNS- eller webbläsarnivå. Spårningen bygger på tekniska domäner (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, underdomäner som <code>utiq.&lt;site&gt;</code>). Färdiga blocklistor kan laddas ner nedan.</li><li><strong>Använd en filtrerande DNS</strong> (AdGuard Home, NextDNS, Pi-hole) eller en innehållsblockerare (uBlock Origin) med dessa listor.</li><li><strong>På mobilen</strong> härleds identifieraren från din operatörsuppkoppling: att använda en VPN eller ett icke-deltagande nätverk begränsar nätverkskopplingen, men ersätter inte att återkalla samtycke.</li></ul><p class='faq-dl'><strong>Utiq-blocklistor att ladda ner:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>domäner</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>”strikta” versioner och index</a>).</p>"
+    ],
+    [
+      "Vad är Utiq egentligen?",
+      "<p>Utiq är ett företag (avknoppat från ett samriskföretag mellan Deutsche Telekom, Orange, Telefónica och Vodafone, lanserat 2023) som erbjuder en teknik för reklamidentifiering baserad på operatörsnätverk. I stället för att lägga en cookie i din webbläsare bygger den på en <strong>”network signal”</strong> som tillhandahålls av din operatör för att generera pseudonyma identifierare (martechpass, adtechpass) som används av varumärken och annonsnätverk för riktning och mätning.</p>"
+    ],
+    [
+      "Hur fungerar Utiq tekniskt?",
+      "<p>När du godkänner på en deltagande webbplats gör Utiq SDK ett säkert anrop till din operatör, som returnerar en <em>network signal</em> som matchar din uppkoppling. Den signalen kopplas till en stabil slumpmässig identifierare (<em>consentpass</em>), från vilken de identifierare som exponeras för annonsörer härleds. Dessa signaler fungerar <strong>över olika webbläsare och enheter</strong> på samma uppkoppling, vilket möjliggör återidentifiering i stor skala.</p>"
+    ],
+    [
+      "Vilka operatörer och länder är inblandade?",
+      "<p>De grundande operatörerna är Deutsche Telekom, Orange, Telefónica och Vodafone, sedan med fler anslutna. Utbredningen är huvudsakligen europeisk (Tyskland, Frankrike, Spanien, Storbritannien, Italien, Österrike…). Fördelningen av de webbplatser som listas här återspeglar den omfattningen.</p>"
+    ],
+    [
+      "Hur upptäcker den här webbplatsen vilka webbplatser som använder Utiq?",
+      "<p>Indexet korsrefererar flera offentliga signaler: DNS-poster som pekar mot Utiqs infrastruktur (<code>*.utiq-aws.net</code>), TLS-certifikat utfärdade för underdomäner som <code>utiq.&lt;site&gt;</code> (Certificate Transparency-loggar), och en kontroll av att Utiqs <em>loader</em> faktiskt svarar på domänen. Datumet ”Utiq sedan” är <strong>uppskattat</strong> (tidigast kända offentliga spår) och landet är en uppskattning av marknadsutgåvan, inte ett juridiskt huvudkontor.</p>"
+    ],
+    [
+      "Är listan uttömmande?",
+      "<p><strong>Nej.</strong> Det är en ögonblicksbild, icke uttömmande och kan komma att ändras. Webbplatser kan börja eller sluta använda Utiq när som helst. Listan tillhandahålls i informationssyfte.</p>"
+    ],
+    [
+      "Får jag återanvända data?",
+      "<p>Ja. Listan kan exporteras som <a href='{data_json}'>JSON</a> och <a href='{data_csv}'>CSV</a>, och en stabil API-åtkomst är dokumenterad på <a href='{api}'>API-sidan</a> (med CORS, för extern användning).</p>"
+    ]
+  ],
+  "about_html": "<h3 class='pix'>Vad är Utiq?</h3><p><strong>Utiq</strong> är en reklamspårare byggd av fyra telekomjättar (Deutsche Telekom, Orange, Telefónica, Vodafone) som gör din operatör till en spårare: din mobila eller fasta uppkoppling — ditt nummer, ditt abonnemang — blir ett reklam-ID som följer dig från webbplats till webbplats, från webbläsare till webbläsare och från enhet till enhet.</p><p>Utiq lanserades 2023 och presenterar sig som en ”autentisk” samtyckestjänst för reklamspårning som drivs av teleoperatörer. I praktiken blir din operatör länken mellan din abonnentidentitet och ditt surfande, precis där annonsnätverken höll på att förlora insyn i och med slutet på tredjepartscookies.</p><h3 class='pix'>Varför är det ett problem?</h3><p>Spårningen sker <strong>på nätverksnivå</strong>, oberoende av webbläsare eller enhet, och överlever att man rensar cookies eller surfar privat. Den bygger på samtycke, men det samtycket begärs ofta genom tvetydiga banners, ibland som ”samtyck eller betala”.</p><h3 class='pix'>Metod</h3><p>Indexet korsrefererar offentliga signaler: DNS-poster som pekar mot Utiqs infrastruktur (<code>*.utiq-aws.net</code>), TLS-certifikat för underdomäner som <code>utiq.&lt;site&gt;</code> (Certificate Transparency-loggar), och en kontroll av att Utiqs <em>loader</em> svarar på domänen. Hittills är <strong>{n} webbplatser</strong> listade, varav <strong>{fr} i Frankrike</strong>. Datumet ”Utiq sedan” uppskattas utifrån det tidigast kända offentliga spåret.</p><p><strong>Icke uttömmande lista, kan komma att ändras.</strong> Hittade du ett fel? En webbplats att rapportera? Kontakta <a href='{site}' target='_blank' rel='noopener'>Christophe Boutry</a>.</p><h3 class='pix'>Avregistrera dig / skydda dig</h3><p>Se <a href='{faq}'>FAQ:n</a>: avregistrera dig via <a href='{consent}' target='_blank' rel='noopener'>Utiqs Consent Hub</a> och nedladdningsbara DNS-blocklistor.</p>",
+  "legal": {
+    "title": "Juridisk information",
+    "html": "<h3 class='pix'>Utgivare</h3><p>Webbplatsen <strong>utiq-tracker.online</strong> ges ut av <strong>Christophe Boutry</strong>, med säte i Paris (75012), Frankrike. Kontakt: via <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p><h3 class='pix'>Ansvarig utgivare</h3><p>Christophe Boutry.</p><h3 class='pix'>Webbhotell</h3><p>Webbplatsen hostas på en dedikerad server hos OVH SAS, 2 rue Kellermann, 59100 Roubaix, Frankrike (<a href='https://www.ovhcloud.com' target='_blank' rel='noopener'>ovhcloud.com</a>).</p><h3 class='pix'>Syfte och oberoende</h3><p>Utiq Tracker är ett oberoende informationsprojekt som listar webbplatser som använder Utiq-tekniken utifrån offentliga tekniska signaler. <strong>Den här webbplatsen är inte knuten till Utiq SA/NV, dess grundande operatörer (Deutsche Telekom, Orange, Telefónica, Vodafone) eller något av de varumärken som nämns.</strong> Varumärken och namn tillhör sina respektive ägare. Listan är icke uttömmande, kan komma att ändras och tillhandahålls utan garanti för riktighet.</p><h3 class='pix'>Immateriella rättigheter</h3><p>Webbplatsens struktur, originaltexter och kod tillhör utgivaren. Indexdata görs tillgängliga under licensen <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>.</p><h3 class='pix'>Personuppgifter &amp; cookies</h3><p>Den här webbplatsen sätter <strong>inga spårningscookies</strong> och samlar inte in några identifierbara personuppgifter. Ingen tredjepartsspårare laddas; favicons hostas lokalt och inget externt webbtypsnitt laddas (systemtypografi). All behandling av uppgifter regleras av GDPR (EU-förordning 2016/679).</p><h3 class='pix'>Rapportering</h3><p>För att rapportera ett fel eller begära borttagning, kontakta utgivaren via <a href='{site}' target='_blank' rel='noopener'>christopheboutry.com</a>.</p>"
+  },
+  "api": {
+    "intro_html": "Utiq Tracker-data är fritt återanvändbara (licens <a href='https://creativecommons.org/licenses/by/4.0/' target='_blank' rel='noopener'>CC BY 4.0</a>, ange gärna ”Utiq Tracker”). Slutpunkten nedan är stabil, skrivskyddad och levereras med headern <code>Access-Control-Allow-Origin: *</code> (CORS) för direkt användning från webbläsaren.",
+    "endpoint_label": "Stabil slutpunkt",
+    "fields_label": "Fält",
+    "notes_html": "<p>Datamängden innehåller <strong>{n} poster</strong>. Svar: ett <code>meta</code>-objekt (generering, totalt, källa, licens) + en <code>sites</code>-array. Uppdateras då och då. <strong>Icke uttömmande lista.</strong></p>"
+  },
+  "categories": {
+    "general": "Allmänt / övrigt",
+    "news": "Nyheter & media",
+    "sport": "Sport",
+    "auto": "Bilar & motor",
+    "culture": "Kultur & underhållning",
+    "tech": "Teknik",
+    "jobs": "Jobb & utbildning",
+    "audio": "Radio & ljud",
+    "lifestyle": "Livsstil",
+    "retail": "Handel & shopping",
+    "finance": "Finans & ekonomi",
+    "home": "Hem & fastigheter",
+    "travel": "Resor & turism",
+    "health": "Hälsa & välbefinnande",
+    "technical": "Tekniskt / test",
+    "food": "Mat & matlagning",
+    "security": "Säkerhet",
+    "animals": "Djur"
+  },
+  "countries": {
+    "FR": "Frankrike",
+    "DE": "Tyskland",
+    "ES": "Spanien",
+    "GB": "Storbritannien",
+    "IT": "Italien",
+    "US": "USA",
+    "AT": "Österrike",
+    "CA": "Kanada",
+    "PL": "Polen",
+    "EU": "Europeiska unionen",
+    "DK": "Danmark",
+    "MC": "Monaco",
+    "PT": "Portugal",
+    "CH": "Schweiz",
+    "SE": "Sverige",
+    "INT": "Internationellt / ej fastställt"
+  },
+  "og": {
+    "l1": "Den öppna katalogen över sajter som spårar dig",
+    "l2": "via din teleoperatör. Och hur du slipper det.",
+    "slogan": "”Le, du blir spårad.”",
+    "stat": "{n} listade webbplatser · {fr} i Frankrike"
+  }
+}

@@ -10,13 +10,17 @@ This project lists the sites where Utiq has been detected, explains how it works
 
 ## Features
 
-- Bilingual static site (French at `/`, English at `/en/`), browser language is auto-detected on first visit
+- Multilingual static site in 9 languages (French at `/`, the rest under `/<lang>/`: en, de, es, it, pl, da, pt, sv), with a language menu and a browser-language redirect on first visit
 - Full-text search plus filters by scope (France / World), category and country
 - One card per site: favicon, name, domain, short description, country flag, estimated first-seen date
 - Self-hosted favicons and no external web fonts, so no third-party request is made from a visitor's browser
 - FAQ covering what Utiq is, how to opt out through the official Consent Hub, and how to block it (DNS blocklists included)
 - Open data: JSON and CSV export, plus a stable JSON API with CORS enabled
-- SEO ready: per-page metadata, Open Graph image, JSON-LD (WebSite, Dataset, FAQPage), sitemap and hreflang
+- SEO ready: per-language metadata, Open Graph image, JSON-LD (WebSite, Dataset, FAQPage), hreflang and a sitemap
+
+## Translations
+
+Each language is a single JSON file in `build/i18n/<lang>.json` (same schema as `en.json`). To add a language, copy `en.json`, translate the values (keep the keys, HTML tags, `{placeholders}` and URLs untouched), drop it in `build/i18n/`, add the code to `LANGS` in `build/content.py`, and rebuild. Category and country labels live in the same file.
 
 ## Data and API
 
