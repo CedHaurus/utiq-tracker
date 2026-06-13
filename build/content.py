@@ -12,6 +12,7 @@ SOCIAL = {
     "site":   "https://christopheboutry.com",
     "x":      "https://x.com/Ced_haurus",
     "github": "https://github.com/CedHaurus",
+    "repo":   "https://github.com/CedHaurus/utiq-tracker",
 }
 CONSENT_HUB = "https://consenthub.utiq.com/"
 

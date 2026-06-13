@@ -45,6 +45,10 @@ a:hover{text-decoration:underline}
 .nav a:hover{border-color:var(--ink);text-decoration:none;background:var(--cream)}
 .nav a.cta{background:var(--orange);color:#fff;border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
 .nav a.cta:hover{background:var(--orange-d)}
+.nav-gh{width:38px;height:38px;flex:0 0 auto;border:2px solid var(--ink);border-radius:var(--radius);
+  display:grid;place-items:center;color:var(--ink);background:var(--paper)}
+.nav-gh:hover{background:var(--ink);color:var(--cream-2)}
+.nav-gh svg{width:18px;height:18px;fill:currentColor}
 .langmenu{position:relative}
 .langmenu>summary{list-style:none;cursor:pointer;font-family:var(--mono);font-weight:700;font-size:12px;
   text-transform:uppercase;letter-spacing:.3px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);

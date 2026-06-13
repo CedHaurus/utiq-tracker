@@ -89,6 +89,7 @@ def subst(text, lang, n_total=None, n_fr=None):
         "{home}": page_url("list", lang),
         "{consent}": CONSENT_HUB,
         "{site}": SOCIAL["site"],
+        "{repo}": SOCIAL["repo"],
         "{blocklists}": "/blocklists/",
         "{data_json}": "/data/utiq-sites.json",
         "{data_csv}": "/data/utiq-sites.csv",
@@ -162,6 +163,10 @@ def fetch_all_favicons(recs):
 # ---------------------------------------------------------------------------
 # 3. Briques HTML communes
 # ---------------------------------------------------------------------------
+GH_SVG = '<svg viewBox="0 0 24 24"><path d="M12 .5C5.4.5 0 5.9 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.4-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 3 .1 3.3.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.8-1.6 8.2-6.1 8.2-11.4C24 5.9 18.6.5 12 .5z"/></svg>'
+X_SVG = '<svg viewBox="0 0 24 24"><path d="M18.9 1.6h3.5l-7.6 8.7 9 11.9h-7L11.7 15l-6.3 7.2H1.9l8.1-9.3L1.3 1.6h7.1l4.7 6.2 5.8-6.2zm-1.2 18.7h1.9L7.1 3.6H5z"/></svg>'
+
+
 def head(t, title, desc, page, lang, og=None, extra=""):
     if og is None:
         og = "/assets/og.png" if lang == "fr" else f"/assets/og-{lang}.png"
@@ -222,13 +227,15 @@ def header(t, lang, active):
     return f"""<header class="site-header"><div class="wrap hbar">
 <a class="brand" href="{b}/"><span class="logo-mark"><span>U</span></span>
 <span class="brand-name">Utiq <b>Tracker</b></span></a>
-<nav class="nav">{nav}{lang_menu(active, lang)}</nav></div></header>"""
+<nav class="nav">{nav}
+<a class="nav-gh" href="{SOCIAL['repo']}" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">{GH_SVG}</a>
+{lang_menu(active, lang)}</nav></div></header>"""
 
 
 def footer(t, lang):
     u = t["ui"]
-    x_svg = '<svg viewBox="0 0 24 24"><path d="M18.9 1.6h3.5l-7.6 8.7 9 11.9h-7L11.7 15l-6.3 7.2H1.9l8.1-9.3L1.3 1.6h7.1l4.7 6.2 5.8-6.2zm-1.2 18.7h1.9L7.1 3.6H5z"/></svg>'
-    gh_svg = '<svg viewBox="0 0 24 24"><path d="M12 .5C5.4.5 0 5.9 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.4-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 3 .1 3.3.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.8-1.6 8.2-6.1 8.2-11.4C24 5.9 18.6.5 12 .5z"/></svg>'
+    x_svg = X_SVG
+    gh_svg = GH_SVG
     return f"""<footer class="site-footer">
 <div class="wrap foot">
 <div class="links">
