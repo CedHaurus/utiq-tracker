@@ -16,13 +16,39 @@
   var limit = PAGE;
   var state = { q: "", scope: "all", cat: "all", country: "all" };
 
+  // Pays « maison » : défaut serveur (langue de la page), affiné par le navigateur.
+  var U = window.UTIQ || { home: "FR", countries: {} };
+  var HOME = U.home;
+  var homeBtn = document.querySelector('[data-scope="home"]');
+
+  function detectCountry() {
+    var l = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+    var m = /[-_]([A-Za-z]{2})(?:[-_]|$)/.exec(l);
+    if (m) {
+      var cc = m[1].toUpperCase();
+      if (U.countries[cc]) return cc;
+    }
+    return null;
+  }
+
+  (function initHome() {
+    var cc = detectCountry();
+    if (cc && U.countries[cc]) HOME = cc;
+    if (homeBtn && U.countries[HOME]) {
+      var f = homeBtn.querySelector(".seg-flag"), n = homeBtn.querySelector(".seg-home");
+      if (f) f.textContent = U.countries[HOME][0];
+      if (n) n.textContent = U.countries[HOME][1];
+    }
+  })();
+
   function norm(s) {
     return (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
 
   function matches(c, needle) {
     if (needle && c.getAttribute("data-search").indexOf(needle) === -1) return false;
-    if (state.scope !== "all" && c.getAttribute("data-region") !== state.scope) return false;
+    if (state.scope === "home" && c.getAttribute("data-country") !== HOME) return false;
+    if (state.scope === "world" && c.getAttribute("data-country") === HOME) return false;
     if (state.cat !== "all" && c.getAttribute("data-cat") !== state.cat) return false;
     if (state.country !== "all" && c.getAttribute("data-country") !== state.country) return false;
     return true;

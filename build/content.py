@@ -27,6 +27,13 @@ LANG_LOCALE = {
     "it": "it_IT", "pl": "pl_PL", "da": "da_DK", "pt": "pt_PT", "sv": "sv_SE",
 }
 
+# Pays « maison » par défaut d'une langue (bouton de filtre pays, avant l'affinage
+# JS selon le pays réel du navigateur).
+LANG_HOME = {
+    "fr": "FR", "en": "GB", "de": "DE", "es": "ES", "it": "IT",
+    "pl": "PL", "da": "DK", "pt": "PT", "sv": "SE",
+}
+
 I18N_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "i18n")
 
 

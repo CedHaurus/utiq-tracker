@@ -11,7 +11,9 @@ from datetime import datetime, timezone
 import requests
 
 from maps import CAT_KEY, CAT_FALLBACK, COUNTRY_META, COUNTRY_FALLBACK
-from content import SOCIAL, CONSENT_HUB, LANG_NAMES, LANG_LOCALE, load_content
+from content import SOCIAL, CONSENT_HUB, LANG_NAMES, LANG_LOCALE, LANG_HOME, load_content
+
+CODE_FLAG = {code: flag for code, flag in COUNTRY_META.values()}
 
 ROOT   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUILD  = os.path.join(ROOT, "build")
@@ -298,10 +300,20 @@ def render_index(t, lang, recs, country_opts, cat_opts, redirect_js):
     }
     ld_s = f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
     cards = "\n".join(card_html(r, t, hidden=(i >= 30)) for i, r in enumerate(recs))
+    # Pays « maison » : défaut = pays de la langue (affiné côté client selon le navigateur)
+    present = {}
+    for r in recs:
+        present.setdefault(r["country_code"], [r["flag"], t["countries"].get(r["country_code"], r["country_code"])])
+    home = LANG_HOME.get(lang, "FR")
+    if home not in present:
+        home = "FR"
+    hflag, hname = present[home]
     seg = (f'<button data-scope="all" aria-pressed="true">{u["scope_all"]}</button>'
-           f'<button data-scope="fr">🇫🇷 {u["scope_fr"]}</button>'
+           f'<button data-scope="home"><span class="seg-flag">{hflag}</span> <span class="seg-home">{html.escape(hname)}</span></button>'
            f'<button data-scope="world">🌍 {u["scope_world"]}</button>')
-    out = head(t, title, t["meta_desc"], "list", lang, extra=redirect + ld_s)
+    utiq_js = json.dumps({"home": home, "countries": present}, ensure_ascii=False)
+    utiq_embed = f'<script>window.UTIQ={utiq_js};</script>'
+    out = head(t, title, t["meta_desc"], "list", lang, extra=redirect + utiq_embed + ld_s)
     out += header(t, lang, "list")
     out += f"""<main>
 <section class="hero"><div class="wrap">

@@ -97,6 +97,9 @@ select:hover{background-color:var(--cream)}
 .segmented button:first-child{border-left:0}
 .segmented button:hover{background:var(--cream)}
 .segmented button[aria-pressed="true"]{background:var(--orange);color:#fff}
+.segmented button{min-width:0}
+.seg-flag{font-size:13px;flex:0 0 auto}
+.seg-home{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .count{font-family:var(--mono);font-size:13px;white-space:nowrap}
 .count b{color:var(--orange-d);font-size:17px}
 .btn{font-family:var(--mono);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.3px;
