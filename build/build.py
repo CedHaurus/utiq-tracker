@@ -7,7 +7,7 @@ Le contenu de chaque langue est dans build/i18n/<lang>.json (voir content.py).
 """
 import json, csv, os, re, shutil, html, hashlib, unicodedata
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import requests
 
 from maps import CAT_KEY, CAT_FALLBACK, COUNTRY_META, COUNTRY_FALLBACK
@@ -483,6 +483,38 @@ def write_data(recs):
                         s["country"], s["scope"], s["utiq_since"] or "", s["loader_confirmed"]])
 
 
+def write_blocklist_index():
+    files = sorted(
+        f for f in os.listdir(os.path.join(PUB, "blocklists"))
+        if f != "index.html"
+    )
+    links = "\n".join(
+        f'<li><a href="/blocklists/{html.escape(f)}">{html.escape(f)}</a></li>'
+        for f in files
+    )
+    page = f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Utiq blocklists — Utiq Tracker</title>
+<meta name="description" content="Download standard and strict Utiq blocklists for DNS resolvers, hosts files, AdGuard, uBlock Origin, Unbound and RPZ.">
+<link rel="canonical" href="{SITE}/blocklists/">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<link rel="stylesheet" href="/assets/style.css?v={ASSET_VER}">
+</head>
+<body>
+<main><section class="page wrap prose">
+<h1 class="pix">Utiq blocklists</h1>
+<p class="lead">Ready-to-use standard and strict lists for blocking Utiq domains.</p>
+<ul>{links}</ul>
+<p><a href="/faq.html">Documentation and protection guide</a> · <a href="/">Utiq Tracker</a></p>
+</section></main>
+</body>
+</html>"""
+    open(os.path.join(PUB, "blocklists", "index.html"), "w", encoding="utf-8").write(page)
+
+
 # ---------------------------------------------------------------------------
 # 6. Assets (favicon SVG, OG images par langue, robots, sitemap)
 # ---------------------------------------------------------------------------
@@ -555,6 +587,15 @@ def write_og(n_total, n_fr):
 def write_seo():
     open(os.path.join(PUB, "robots.txt"), "w").write(
         "User-agent: *\nAllow: /\nSitemap: %s/sitemap.xml\n" % SITE)
+    well_known = os.path.join(PUB, ".well-known")
+    os.makedirs(well_known, exist_ok=True)
+    expires = (datetime.now(timezone.utc) + timedelta(days=365)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    open(os.path.join(well_known, "security.txt"), "w", encoding="utf-8").write(
+        f"Contact: {SOCIAL['site']}\n"
+        f"Expires: {expires}\n"
+        f"Canonical: {SITE}/.well-known/security.txt\n"
+        "Preferred-Languages: fr, en\n"
+    )
     items = ""
     for page in PAGES:
         for lang in LANGS:
@@ -565,6 +606,8 @@ def write_seo():
             alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{SITE}{page_url(page, "fr")}"/>'
             items += (f'<url><loc>{loc}</loc>{alts}<lastmod>{GEN_AT[:10]}</lastmod>'
                       f'<changefreq>weekly</changefreq></url>\n')
+    items += (f'<url><loc>{SITE}/blocklists/</loc><lastmod>{GEN_AT[:10]}</lastmod>'
+              f'<changefreq>weekly</changefreq></url>\n')
     sm = ('<?xml version="1.0" encoding="UTF-8"?>\n'
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
           'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + items + '</urlset>\n')
@@ -626,6 +669,7 @@ def main():
                         os.path.join(PUB, "assets", "favicons", safe(r["domain"]) + ".png"))
     for f in os.listdir(BLOCK):
         shutil.copy(os.path.join(BLOCK, f), os.path.join(PUB, "blocklists", f))
+    write_blocklist_index()
 
     print("· données publiques + assets SEO")
     write_data(recs)
@@ -638,13 +682,16 @@ def main():
         pass
     write_seo()
 
-    # script de redirection auto (langue navigateur) injecté sur la racine FR
+    # Adaptation automatique pour les visiteurs, jamais pour les robots ou outils
+    # automatisés : ceux-ci doivent conserver la racine canonique française.
     js_langs = json.dumps(LANGS)
     redirect_js = ("<script>(function(){try{var L=" + js_langs + ";"
+                   "var u=navigator.userAgent||'';"
+                   "var b=navigator.webdriver||/bot|crawler|spider|slurp|lighthouse|headless/i.test(u);"
                    "var p=localStorage.getItem('utiq-lang');"
                    "var n=(navigator.language||'').slice(0,2).toLowerCase();"
                    "var t=(p&&L.indexOf(p)>=0)?p:(L.indexOf(n)>=0?n:'fr');"
-                   "if(t!=='fr'&&location.pathname==='/')location.replace('/'+t+'/');"
+                   "if(!b&&t!=='fr'&&location.pathname==='/')location.replace('/'+t+'/');"
                    "}catch(e){}})();</script>")
 
     print("· rendu HTML")

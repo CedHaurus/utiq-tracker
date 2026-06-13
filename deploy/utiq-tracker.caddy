@@ -21,7 +21,7 @@ utiq-tracker.online {
         Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none'"
     }
 
-    reverse_proxy utiq_tracker_nginx:80 {
+    reverse_proxy utiq_tracker_nginx:8080 {
         header_up Host {host}
         header_up X-Real-IP {client_ip}
         header_up X-Forwarded-Proto {scheme}
