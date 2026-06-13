@@ -64,8 +64,8 @@ UI = {
     "footer_legal": "Mentions légales",
     "back_home": "← Retour à l’accueil",
     "meta_desc": (
-        "Utiq Tracker recense les sites web et plateformes, en France et dans le monde, qui utilisent Utiq, "
-        "le pistage publicitaire des opérateurs télécoms. Recherche plein texte, filtres, export JSON/CSV."
+        "Savoir qui vous piste via votre opérateur télécom, et comment s’y soustraire. Utiq Tracker recense "
+        "les sites utilisant Utiq, le pistage publicitaire des opérateurs, en France et dans le monde. Liste ouverte."
     ),
     "faq_title": "FAQ Utiq",
     "faq_intro": "Tout comprendre sur Utiq : ce que c’est, comment ça vous trace, comment vous y soustraire.",
@@ -123,8 +123,8 @@ UI = {
     "footer_legal": "Legal notice",
     "back_home": "← Back to home",
     "meta_desc": (
-        "Utiq Tracker lists the websites and platforms, in France and worldwide, that use Utiq, the telecom "
-        "operators’ advertising tracker. Full-text search, filters, JSON/CSV export."
+        "Know who tracks you through your telecom operator, and how to opt out. Utiq Tracker lists the sites "
+        "using Utiq, the operators’ advertising tracker, in France and worldwide. Open list and data."
     ),
     "faq_title": "Utiq FAQ",
     "faq_intro": "Everything about Utiq: what it is, how it tracks you, how to opt out.",

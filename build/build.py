@@ -33,6 +33,7 @@ def _asset_ver():
         h.update(open(os.path.join(STATIC, f), "rb").read())
     return h.hexdigest()[:8]
 ASSET_VER = _asset_ver()
+OG_VER = "1"
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"}
 MONO_COLORS = ["#e8590c", "#1b1a17", "#0b7285", "#5f3dc4", "#a61e4d", "#2b8a3e", "#9c6644", "#1864ab"]
@@ -122,6 +123,8 @@ def fetch_all_favicons(recs):
 # ---------------------------------------------------------------------------
 def head(t, title, desc, page, lang, og="/assets/og.png", extra=""):
     fr_url, en_url = PAGE_URLS[page]
+    if lang == "en" and og == "/assets/og.png":
+        og = "/assets/og-en.png"
     alt_fr = SITE + fr_url
     alt_en = SITE + en_url
     canonical = SITE + (fr_url if lang == "fr" else en_url)
@@ -141,12 +144,12 @@ def head(t, title, desc, page, lang, og="/assets/og.png", extra=""):
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}{og}">
+<meta property="og:image" content="{SITE}{og}?v={OG_VER}">
 <meta property="og:locale" content="{'fr_FR' if lang=='fr' else 'en_GB'}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{html.escape(title)}">
 <meta name="twitter:description" content="{html.escape(desc)}">
-<meta name="twitter:image" content="{SITE}{og}">
+<meta name="twitter:image" content="{SITE}{og}?v={OG_VER}">
 <meta name="theme-color" content="#e8590c">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
@@ -557,38 +560,54 @@ def write_og(n_total, n_fr):
     try:
         from PIL import Image, ImageDraw, ImageFont
         W, H = 1200, 630
-        img = Image.new("RGB", (W, H), "#f3ead4")
-        d = ImageDraw.Draw(img)
-        for y in range(0, H, 8):
-            for x in range(0, W, 8):
-                d.point((x, y), fill="#e7dcc0")
-        ttf = os.path.join(BUILD, "silkscreen.ttf")
-        if not os.path.exists(ttf):
-            try:
-                r = requests.get("https://github.com/google/fonts/raw/main/ofl/silkscreen/Silkscreen-Bold.ttf",
-                                 headers=UA, timeout=20)
-                if r.status_code == 200:
-                    open(ttf, "wb").write(r.content)
-            except Exception:
-                pass
-        def font(sz):
-            try:
-                return ImageFont.truetype(ttf, sz)
-            except Exception:
-                return ImageFont.load_default()
-        d.rectangle([0, 0, W, 14], fill="#e8590c")
-        d.rectangle([60, 70, 150, 160], fill="#e8590c", outline="#1b1a17", width=6)
-        d.text((84, 92), "U", font=font(56), fill="#ffffff")
-        d.text((175, 78), "UTIQ", font=font(64), fill="#1b1a17")
-        d.text((175, 150), "TRACKER", font=font(64), fill="#e8590c")
-        d.text((62, 250), "Sites & plateformes", font=font(34), fill="#1b1a17")
-        d.text((62, 300), "qui utilisent Utiq", font=font(34), fill="#1b1a17")
-        d.rectangle([62, 380, 742, 470], fill="#1b1a17")
-        d.text((84, 408), f"{n_total} SITES  /  {n_fr} EN FRANCE", font=font(24), fill="#f3ead4")
-        d.text((62, 560), "utiq-tracker.online", font=font(28), fill="#c2470a")
-        img.save(os.path.join(PUB, "assets", "og.png"))
-        img.resize((180, 180)).save(os.path.join(PUB, "assets", "icon-180.png"))
-        print("  OG image générée")
+        cream, ink, orange, orange_d = "#f3ead4", "#1b1a17", "#e8590c", "#c2470a"
+        FB = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+        FI = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-BoldOblique.ttf"
+        def fb(sz):
+            try: return ImageFont.truetype(FB, sz)
+            except Exception: return ImageFont.load_default()
+        def fi(sz):
+            try: return ImageFont.truetype(FI, sz)
+            except Exception: return ImageFont.load_default()
+        def render(path, l1, l2, slogan, stat):
+            img = Image.new("RGB", (W, H), cream)
+            d = ImageDraw.Draw(img)
+            for yy in range(26, H, 11):
+                for xx in range(26, W, 11):
+                    d.point((xx, yy), fill="#e6dabd")
+            d.rectangle([0, 0, W, 12], fill=orange)
+            M = 72
+            d.rounded_rectangle([M, 70, M + 96, 166], radius=12, fill=orange, outline=ink, width=5)
+            d.text((M + 48, 118), "U", font=fb(62), fill="#ffffff", anchor="mm")
+            tf = fb(70)
+            tx = M + 122
+            d.text((tx, 80), "UTIQ", font=tf, fill=ink)
+            d.text((tx + d.textlength("UTIQ ", font=tf), 80), "TRACKER", font=tf, fill=orange)
+            pf = fb(32)
+            d.text((M, 248), l1, font=pf, fill=ink)
+            d.text((M, 292), l2, font=pf, fill=ink)
+            d.text((M, 366), slogan, font=fi(40), fill=orange_d)
+            d.line([M, 498, W - M, 498], fill=ink, width=3)
+            nf = fb(27)
+            d.text((M, 524), stat, font=nf, fill=ink)
+            ut = "utiq-tracker.online"
+            d.text((W - M - d.textlength(ut, font=nf), 524), ut, font=nf, fill=orange_d)
+            img.save(path)
+        ap = lambda n: os.path.join(PUB, "assets", n)
+        render(ap("og.png"),
+               "L’annuaire ouvert des sites qui vous pistent",
+               "via votre opérateur télécom. Pour s’en protéger.",
+               "« Souriez, vous êtes traqué. »",
+               f"{n_total} sites recensés · {n_fr} en France")
+        render(ap("og-en.png"),
+               "The open directory of sites that track you",
+               "via your telecom operator. And how to opt out.",
+               "« Smile, you’re being tracked. »",
+               f"{n_total} sites listed · {n_fr} in France")
+        ic = Image.new("RGB", (180, 180), orange)
+        ImageDraw.Draw(ic).text((90, 96), "U", font=fb(120), fill="#ffffff", anchor="mm")
+        ic.save(ap("icon-180.png"))
+        print("  OG images generees (fr + en)")
     except Exception as e:
         print("  OG image: skip (", e, ")")
 
@@ -668,6 +687,11 @@ def main():
     write_data(recs)
     write_favicon_svg()
     write_og(n_total, n_fr)
+    global OG_VER
+    try:
+        OG_VER = hashlib.md5(open(os.path.join(PUB, "assets", "og.png"), "rb").read()).hexdigest()[:8]
+    except Exception:
+        pass
     write_seo()
 
     print("· rendu HTML")
