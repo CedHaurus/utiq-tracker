@@ -46,6 +46,15 @@ The API response is an object with a `meta` block and a `sites` array. Each site
 
 The data is published under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Please credit "Utiq Tracker".
 
+## Browser extension
+
+A companion browser extension, **Utiq Detector** (Chrome and Firefox), warns users when a
+site uses Utiq. It reads the reference list from this project API (`/api/v1/sites.json`)
+and lets users report unlisted sites back to it (`POST /api/v1/report`).
+
+- Repository: https://github.com/CedHaurus/utiq-detector
+- Privacy policy: https://utiq-tracker.online/privacy-extension
+
 ## How detection works
 
 A site is listed when several public signals line up:
