@@ -31,6 +31,43 @@ services:
     networks:
       - edge
 
+  # Backend de signalement (POST /api/v1/report). Routé par le nginx ci-dessus.
+  # Seul composant capable d'écrire : un unique volume inscriptible (./reports).
+  report:
+    build: ./report
+    image: utiq-tracker-report:local
+    container_name: utiq_tracker_report
+    restart: unless-stopped
+    user: "1000:1000"
+    read_only: true
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 64
+    mem_limit: 128m
+    cpus: 0.5
+    env_file:
+      - ./report/.env
+    environment:
+      - PORT=8090
+      - REPORTS_DIR=/data
+      - SITES_PATH=/app/public/api/v1/sites.json
+    tmpfs:
+      - /tmp:uid=1000,gid=1000,mode=1777,size=4m,noexec,nosuid,nodev
+    volumes:
+      - ./reports:/data                       # seul point d'écriture, hors racine web
+      - ./public:/app/public:ro               # lecture de sites.json (domaines connus)
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8090/healthz | grep -q ok"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - edge
+
 networks:
   edge:
     name: edge

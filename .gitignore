@@ -13,6 +13,10 @@ build/silkscreen.ttf
 # Local/private notes, never published
 CLAUDE.md
 
+# Données de signalement (jamais publiées) + secrets de notification
+reports/
+report/.env
+
 # OS
 .DS_Store
 Thumbs.db
