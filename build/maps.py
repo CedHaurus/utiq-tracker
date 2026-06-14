@@ -27,6 +27,7 @@ CAT_KEY = {
     "Cuisine":                    "food",
     "Sécurité":                   "security",
     "Animaux":                    "animals",
+    "Opérateur télécom":          "operator",
 }
 CAT_FALLBACK = "general"
 

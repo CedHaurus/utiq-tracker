@@ -109,7 +109,8 @@
     "technical": "Tekniskt / test",
     "food": "Mat & matlagning",
     "security": "Säkerhet",
-    "animals": "Djur"
+    "animals": "Djur",
+    "operator": "Teleoperatör"
   },
   "countries": {
     "FR": "Frankrike",

@@ -14,6 +14,17 @@
   "signature": "utiq-aws.net",
   "detections": [
     {
+      "domain": "orange.fr",
+      "site_name": "Orange",
+      "final_url": "https://www.orange.fr/portail",
+      "description": "Portail de l'opérateur Orange, qui exploite Utiq et sert le loader en first-party (tmi.orange.fr/utiqLoader.js).",
+      "category": "Opérateur télécom",
+      "country": "France",
+      "loader_confirmed": true,
+      "detection_method": "operator-first-party",
+      "loader_host": "tmi.orange.fr/utiqLoader.js"
+    },
+    {
       "domain": "diariosur.es",
       "rank": null,
       "cname": "frontend.prod.utiq-aws.net",

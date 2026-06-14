@@ -109,7 +109,8 @@
     "technical": "Technique / test",
     "food": "Cuisine",
     "security": "Sécurité",
-    "animals": "Animaux"
+    "animals": "Animaux",
+    "operator": "Opérateur télécom"
   },
   "countries": {
     "FR": "France",

@@ -109,7 +109,8 @@
     "technical": "Technisch / Test",
     "food": "Essen & Kochen",
     "security": "Sicherheit",
-    "animals": "Tiere"
+    "animals": "Tiere",
+    "operator": "Telekommunikationsanbieter"
   },
   "countries": {
     "FR": "Frankreich",

@@ -109,7 +109,8 @@
     "technical": "Teknisk / test",
     "food": "Mad & madlavning",
     "security": "Sikkerhed",
-    "animals": "Dyr"
+    "animals": "Dyr",
+    "operator": "Teleoperatør"
   },
   "countries": {
     "FR": "Frankrig",
