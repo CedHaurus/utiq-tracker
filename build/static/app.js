@@ -17,7 +17,7 @@
   var state = { q: "", scope: "all", cat: "all", country: "all" };
 
   // Pays « maison » : défaut serveur (langue de la page), affiné par le navigateur.
-  var U = window.UTIQ || { home: "FR", countries: {} };
+  var U = window.__UTRK || { home: "FR", countries: {} };
   var HOME = U.home;
   var homeBtn = document.querySelector('[data-scope="home"]');
 

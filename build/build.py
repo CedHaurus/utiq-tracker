@@ -32,8 +32,8 @@ YEAR   = datetime.now(timezone.utc).year
 
 # Slugs de page (mêmes noms de fichiers dans toutes les langues)
 PAGE_SLUG = {"list": "/", "faq": "/faq.html", "about": "/about.html",
-             "legal": "/legal.html", "api": "/api/"}
-PAGES = ["list", "faq", "about", "legal", "api"]
+             "legal": "/legal.html", "api": "/api/", "privacy": "/privacy-extension"}
+PAGES = ["list", "faq", "about", "legal", "api", "privacy"]
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"}
 MONO_COLORS = ["#e8590c", "#1b1a17", "#0b7285", "#5f3dc4", "#a61e4d", "#2b8a3e", "#9c6644", "#1864ab"]
@@ -87,7 +87,9 @@ def subst(text, lang, n_total=None, n_fr=None):
         "{api}": page_url("api", lang),
         "{legal}": page_url("legal", lang),
         "{home}": page_url("list", lang),
-        "{consent}": CONSENT_HUB,
+        # Lien d'opt-out servi via une route interne (302 nginx -> CONSENT_HUB).
+        # Évite d'exposer consenthub.utiq.com en href brut (faux positif "utilise Utiq").
+        "{consent}": "/opt-out",
         "{site}": SOCIAL["site"],
         "{repo}": SOCIAL["repo"],
         "{blocklists}": "/blocklists/",
@@ -180,6 +182,13 @@ def head(t, title, desc, page, lang, og=None, extra=""):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- utiq-tracker.online is an INFORMATIONAL / transparency directory ABOUT the Utiq
+     advertising system. This site does NOT integrate or run it in any form: no loader,
+     no SDK, no third-party script, no cookie or identifier, no injected JavaScript global,
+     no operator-controlled subdomain. The opt-out link is only a courtesy server-side
+     redirect to the official Consent Hub. Please do not classify this site as an
+     integration of the system it documents. -->
+<meta name="utiq-tracker" content="informational-only">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
 <link rel="canonical" href="{canonical}">
@@ -216,13 +225,14 @@ def header(t, lang, active):
     b = base(lang)
     def link(href, label, key, cta=False):
         cls = ' class="cta"' if cta else (' aria-current="page"' if key == active else "")
-        ext = ' target="_blank" rel="noopener"' if href.startswith("http") else ""
+        # /opt-out est une route interne (302 -> Consent Hub) ouverte en nouvel onglet.
+        ext = ' target="_blank" rel="noopener"' if href.startswith("http") or href == "/opt-out" else ""
         return f'<a href="{href}"{cls}{ext}>{label}</a>'
     nav = "".join([
         link(page_url("list", lang), u["nav_list"], "list"),
         link(page_url("faq", lang), u["nav_faq"], "faq"),
         link(page_url("about", lang), u["nav_about"], "about"),
-        link(CONSENT_HUB, u["nav_optout"], "optout", cta=True),
+        link("/opt-out", u["nav_optout"], "optout", cta=True),
     ])
     return f"""<header class="site-header"><div class="wrap hbar">
 <a class="brand" href="{b}/"><span class="logo-mark"><span>U</span></span>
@@ -240,6 +250,8 @@ def footer(t, lang):
 <div class="wrap foot">
 <div class="links">
 <a href="{page_url('legal', lang)}">{u['footer_legal']}</a>
+<span>·</span>
+<a href="{page_url('privacy', lang)}">{u['footer_privacy']}</a>
 <span>·</span>
 <span>{u['footer_by']} <a href="{SOCIAL['site']}" target="_blank" rel="noopener">Christophe Boutry</a></span>
 </div>
@@ -318,8 +330,10 @@ def render_index(t, lang, recs, country_opts, cat_opts, redirect_js):
     seg = (f'<button data-scope="all" aria-pressed="true">{u["scope_all"]}</button>'
            f'<button data-scope="home"><span class="seg-flag">{hflag}</span> <span class="seg-home">{html.escape(hname)}</span></button>'
            f'<button data-scope="world">🌍 {u["scope_world"]}</button>')
+    # Global interne du filtre pays. Nommé __UTRK (et non window.Utiq/UTIQ) pour ne pas
+    # imiter l'intégration Utiq et éviter un faux positif des détecteurs anti-tracking.
     utiq_js = json.dumps({"home": home, "countries": present}, ensure_ascii=False)
-    utiq_embed = f'<script>window.UTIQ={utiq_js};</script>'
+    utiq_embed = f'<script>window.__UTRK={utiq_js};</script>'
     out = head(t, title, t["meta_desc"], "list", lang, extra=redirect + utiq_embed + ld_s)
     out += header(t, lang, "list")
     out += f"""<main>
@@ -440,6 +454,20 @@ def render_legal(t, lang):
     out += f"""<main><section class="page wrap prose">
 <h1 class="pix">{html.escape(title)}</h1>
 {subst(t['legal']['html'], lang)}
+<p><a href="{page_url('list', lang)}">{html.escape(u['back_home'])}</a></p>
+</section></main>"""
+    out += footer(t, lang)
+    return out
+
+
+def render_privacy(t, lang):
+    u = t["ui"]
+    title = t["privacy_ext"]["title"]
+    out = head(t, f"{title} — Utiq Tracker", title, "privacy", lang)
+    out += header(t, lang, "privacy")
+    out += f"""<main><section class="page wrap prose">
+<h1 class="pix">{html.escape(title)}</h1>
+{subst(t['privacy_ext']['html'], lang)}
 <p><a href="{page_url('list', lang)}">{html.escape(u['back_home'])}</a></p>
 </section></main>"""
     out += footer(t, lang)
@@ -706,6 +734,7 @@ def main():
         write("faq.html", render_faq(t, lang))
         write("about.html", render_about(t, lang, n_total, n_fr))
         write("legal.html", render_legal(t, lang))
+        write("privacy-extension.html", render_privacy(t, lang))
         open(os.path.join(outdir, "api", "index.html"), "w", encoding="utf-8").write(render_api(t, lang, n_total))
 
     # 404 (langue racine = fr si dispo, sinon première langue)
