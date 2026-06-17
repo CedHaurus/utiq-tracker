@@ -40,7 +40,12 @@
     "faq_intro": "Alt om Utiq: hvad det er, hvordan det sporer dig, hvordan du fravælger det.",
     "about_title": "Om Utiq",
     "api_title": "Dataadgang (JSON API)",
-    "footer_privacy": "Privatliv Utiq Detector"
+    "footer_privacy": "Privatliv Utiq Detector",
+    "ext_nav": "Udvidelse",
+    "ext_install_tpl": "Føj til {b}",
+    "ext_or": "eller",
+    "ext_hint": "Registrerer Utiq på de sider, du besøger, direkte i din browser.",
+    "ext_install_title": "Installer udvidelsen Utiq Detector"
   },
   "faq": [
     [
@@ -49,7 +54,7 @@
     ],
     [
       "Hvordan kan jeg beskytte mig mod Utiq?",
-      "<ul><li><strong>Afvis banneret.</strong> Når en side beder om Utiq-samtykke, så vælg “Afvis”. Uden samtykke forbliver teknologien inaktiv.</li><li><strong>Blokér Utiq-domæner</strong> på DNS- eller browserniveau. Sporingen bygger på tekniske domæner (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code>-underdomæner). Færdige blokeringslister kan hentes nedenfor.</li><li><strong>Brug en filtrerende DNS</strong> (AdGuard Home, NextDNS, Pi-hole) eller en indholdsblokering (uBlock Origin) med disse lister.</li><li><strong>På mobil</strong> udledes identifikatoren af din udbyderforbindelse: at bruge en VPN eller et ikke-deltagende netværk begrænser netværkstilknytningen, men erstatter ikke en tilbagekaldelse af samtykke.</li></ul><p class='faq-dl'><strong>Utiq-blokeringslister til download:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>domæner</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>“strict”-versioner og indeks</a>).</p>"
+      "<ul><li><strong>Installer udvidelsen Utiq Detector</strong> (gratis, Chrome og Firefox): den viser i realtid, når et websted bruger Utiq – direkte i din browser. <a href='{ext_chrome}' target='_blank' rel='noopener'>Chrome</a> · <a href='{ext_firefox}' target='_blank' rel='noopener'>Firefox</a>.</li><li><strong>Afvis banneret.</strong> Når en side beder om Utiq-samtykke, så vælg “Afvis”. Uden samtykke forbliver teknologien inaktiv.</li><li><strong>Blokér Utiq-domæner</strong> på DNS- eller browserniveau. Sporingen bygger på tekniske domæner (<code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code>-underdomæner). Færdige blokeringslister kan hentes nedenfor.</li><li><strong>Brug en filtrerende DNS</strong> (AdGuard Home, NextDNS, Pi-hole) eller en indholdsblokering (uBlock Origin) med disse lister.</li><li><strong>På mobil</strong> udledes identifikatoren af din udbyderforbindelse: at bruge en VPN eller et ikke-deltagende netværk begrænser netværkstilknytningen, men erstatter ikke en tilbagekaldelse af samtykke.</li></ul><p class='faq-dl'><strong>Utiq-blokeringslister til download:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>domæner</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>“strict”-versioner og indeks</a>).</p>"
     ],
     [
       "Hvad er Utiq helt præcist?",

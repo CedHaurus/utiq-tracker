@@ -11,7 +11,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 from maps import CAT_KEY, CAT_FALLBACK, COUNTRY_META, COUNTRY_FALLBACK
-from content import SOCIAL, CONSENT_HUB, LANG_NAMES, LANG_LOCALE, LANG_HOME, load_content
+from content import SOCIAL, CONSENT_HUB, EXT, LANG_NAMES, LANG_LOCALE, LANG_HOME, load_content
 
 CODE_FLAG = {code: flag for code, flag in COUNTRY_META.values()}
 
@@ -95,6 +95,8 @@ def subst(text, lang, n_total=None, n_fr=None):
         "{blocklists}": "/blocklists/",
         "{data_json}": "/data/utiq-sites.json",
         "{data_csv}": "/data/utiq-sites.csv",
+        "{ext_chrome}": EXT["chrome"],
+        "{ext_firefox}": EXT["firefox"],
     }
     if n_total is not None:
         repl["{n}"] = str(n_total)
@@ -232,6 +234,7 @@ def header(t, lang, active):
         link(page_url("list", lang), u["nav_list"], "list"),
         link(page_url("faq", lang), u["nav_faq"], "faq"),
         link(page_url("about", lang), u["nav_about"], "about"),
+        link(page_url("privacy", lang), u["ext_nav"], "privacy"),
         link("/opt-out", u["nav_optout"], "optout", cta=True),
     ])
     return f"""<header class="site-header"><div class="wrap hbar">
@@ -264,6 +267,24 @@ def footer(t, lang):
 </div></footer>
 <script src="/assets/app.js?v={ASSET_VER}" defer></script>
 </body></html>"""
+
+
+def ext_cta(t, variant="hero"):
+    """Bloc d'installation de l'extension. Rendu par défaut sur Chrome ;
+    app.js bascule vers Firefox si le navigateur est Firefox (les deux stores
+    restent toujours accessibles, donc robuste même sans JS / si la détection rate)."""
+    u = t["ui"]
+    tpl = u["ext_install_tpl"]
+    label_chrome = tpl.replace("{b}", "Chrome")
+    return (
+        f'<div class="ext-cta ext-cta-{variant}" data-chrome="{EXT["chrome"]}" '
+        f'data-firefox="{EXT["firefox"]}" data-tpl="{html.escape(tpl)}">'
+        f'<a class="btn orange ext-primary" href="{EXT["chrome"]}" target="_blank" rel="noopener">'
+        f'<span class="ext-ico">🧩</span> <span class="ext-label">{html.escape(label_chrome)}</span></a>'
+        f'<span class="ext-alt">{html.escape(u["ext_or"])} '
+        f'<a class="ext-other" href="{EXT["firefox"]}" target="_blank" rel="noopener">Firefox</a></span>'
+        f'</div>'
+    )
 
 
 def card_html(r, t, hidden=False):
@@ -341,6 +362,7 @@ def render_index(t, lang, recs, country_opts, cat_opts, redirect_js):
 <h1 class="hero-title">Utiq <span>Tracker</span></h1>
 <p class="tagline">{html.escape(t['tagline'])} <span class="slogan-inline">{html.escape(t['slogan'])}</span></p>
 <div class="intro">{t['intro_html']} <a href="{page_url('about', lang)}">{html.escape(u['learn_more'])} →</a></div>
+<div class="hero-ext">{ext_cta(t, "hero")}<span class="ext-hint">{html.escape(u['ext_hint'])}</span></div>
 </div></section>
 
 <section class="toolbar"><div class="wrap tb">
@@ -467,6 +489,11 @@ def render_privacy(t, lang):
     out += header(t, lang, "privacy")
     out += f"""<main><section class="page wrap prose">
 <h1 class="pix">{html.escape(title)}</h1>
+<div class="ext-install-box">
+<p class="ext-install-title">{html.escape(u['ext_install_title'])}</p>
+{ext_cta(t, "box")}
+<span class="ext-hint">{html.escape(u['ext_hint'])}</span>
+</div>
 {subst(t['privacy_ext']['html'], lang)}
 <p><a href="{page_url('list', lang)}">{html.escape(u['back_home'])}</a></p>
 </section></main>"""

@@ -16,6 +16,12 @@ SOCIAL = {
 }
 CONSENT_HUB = "https://consenthub.utiq.com/"
 
+# Extension navigateur « Utiq Detector » (mêmes URL pour toutes les langues).
+EXT = {
+    "chrome":  "https://chromewebstore.google.com/detail/abkbmdfjlfmlonomlbmhgbhkeikpijfl",
+    "firefox": "https://addons.mozilla.org/addon/utiq-detector/",
+}
+
 # Ordre d'affichage. fr en tête (racine), puis le reste.
 LANGS = ["fr", "en", "de", "es", "it", "pl", "da", "pt", "sv"]
 

@@ -40,7 +40,12 @@
     "faq_intro": "Todo sobre Utiq: qué es, cómo te rastrea, cómo darte de baja.",
     "about_title": "Acerca de Utiq",
     "api_title": "Acceso a los datos (API JSON)",
-    "footer_privacy": "Privacidad Utiq Detector"
+    "footer_privacy": "Privacidad Utiq Detector",
+    "ext_nav": "Extensión",
+    "ext_install_tpl": "Añadir a {b}",
+    "ext_or": "o",
+    "ext_hint": "Detecta Utiq en los sitios que visitas, directamente en tu navegador.",
+    "ext_install_title": "Instalar la extensión Utiq Detector"
   },
   "faq": [
     [
@@ -49,7 +54,7 @@
     ],
     [
       "¿Cómo puedo protegerme de Utiq?",
-      "<ul><li><strong>Rechaza el banner.</strong> Cuando un sitio pida el consentimiento de Utiq, elige «Rechazar». Sin consentimiento, la tecnología permanece inactiva.</li><li><strong>Bloquea los dominios de Utiq</strong> a nivel de DNS o de navegador. El rastreo se basa en dominios técnicos (subdominios <code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code>). Más abajo puedes descargar listas de bloqueo listas para usar.</li><li><strong>Usa un DNS con filtrado</strong> (AdGuard Home, NextDNS, Pi-hole) o un bloqueador de contenido (uBlock Origin) con estas listas.</li><li><strong>En el móvil</strong>, el identificador se deriva de tu conexión con el operador: usar una VPN o una red no participante limita la vinculación con la red, pero no sustituye a la retirada del consentimiento.</li></ul><p class='faq-dl'><strong>Listas de bloqueo de Utiq para descargar:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>dominios</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>versiones «estrictas» e índice</a>).</p>"
+      "<ul><li><strong>Instala la extensión Utiq Detector</strong> (gratuita, Chrome y Firefox): te avisa en tiempo real cuando un sitio usa Utiq, directamente en tu navegador. <a href='{ext_chrome}' target='_blank' rel='noopener'>Chrome</a> · <a href='{ext_firefox}' target='_blank' rel='noopener'>Firefox</a>.</li><li><strong>Rechaza el banner.</strong> Cuando un sitio pida el consentimiento de Utiq, elige «Rechazar». Sin consentimiento, la tecnología permanece inactiva.</li><li><strong>Bloquea los dominios de Utiq</strong> a nivel de DNS o de navegador. El rastreo se basa en dominios técnicos (subdominios <code>*.utiq-aws.net</code>, <code>*.utiq.com</code>, <code>utiq.&lt;site&gt;</code>). Más abajo puedes descargar listas de bloqueo listas para usar.</li><li><strong>Usa un DNS con filtrado</strong> (AdGuard Home, NextDNS, Pi-hole) o un bloqueador de contenido (uBlock Origin) con estas listas.</li><li><strong>En el móvil</strong>, el identificador se deriva de tu conexión con el operador: usar una VPN o una red no participante limita la vinculación con la red, pero no sustituye a la retirada del consentimiento.</li></ul><p class='faq-dl'><strong>Listas de bloqueo de Utiq para descargar:</strong> <a href='/blocklists/utiq-standard-hosts.txt'>hosts</a> · <a href='/blocklists/utiq-standard-domains.txt'>dominios</a> · <a href='/blocklists/utiq-standard-adblock.txt'>AdGuard / uBlock</a> · <a href='/blocklists/utiq-standard-unbound.conf'>Unbound</a> · <a href='/blocklists/utiq-standard-rpz.txt'>RPZ</a> (<a href='{blocklists}'>versiones «estrictas» e índice</a>).</p>"
     ],
     [
       "¿Qué es exactamente Utiq?",

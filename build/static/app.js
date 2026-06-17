@@ -110,6 +110,26 @@
   apply(true);
 })();
 
+// Bouton d'installation de l'extension : rendu côté serveur pour Chrome,
+// bascule vers Firefox quand le navigateur est Firefox. Les deux stores
+// restent toujours cliquables (lien secondaire), donc rien ne casse sans JS.
+(function () {
+  "use strict";
+  var isFF = /firefox/i.test(navigator.userAgent || "");
+  if (!isFF) return;
+  document.querySelectorAll(".ext-cta").forEach(function (box) {
+    var ff = box.getAttribute("data-firefox");
+    var ch = box.getAttribute("data-chrome");
+    var tpl = box.getAttribute("data-tpl") || "{b}";
+    var primary = box.querySelector(".ext-primary");
+    var label = box.querySelector(".ext-label");
+    var other = box.querySelector(".ext-other");
+    if (primary && ff) primary.href = ff;
+    if (label) label.textContent = tpl.replace("{b}", "Firefox");
+    if (other && ch) { other.href = ch; other.textContent = "Chrome"; }
+  });
+})();
+
 // Menu de langues : présent sur toutes les pages (hors IIFE de la grille)
 (function () {
   "use strict";
