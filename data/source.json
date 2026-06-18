@@ -14886,6 +14886,16 @@
       "date_source": null,
       "loader_status": 200,
       "loader_confirmed": true
+    },
+    {
+      "domain": "consenthub.utiq.com",
+      "site_name": "Utiq Consent Hub",
+      "final_url": "https://consenthub.utiq.com/",
+      "description": "Page de gestion du consentement opérée par Utiq.",
+      "category": "Généraliste / autre",
+      "country": "International / indéterminé",
+      "estimated_date": "2026-06-18",
+      "loader_confirmed": true
     }
   ],
   "external_validation": {
