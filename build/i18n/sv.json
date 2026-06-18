@@ -42,7 +42,7 @@
     "api_title": "Dataåtkomst (JSON API)",
     "footer_privacy": "Integritet Utiq Detector",
     "ext_nav": "Tillägg",
-    "ext_install_tpl": "Lägg till i {b}",
+    "ext_install": "Lägg till tillägget",
     "ext_or": "eller",
     "ext_hint": "Upptäcker Utiq på webbplatserna du besöker, direkt i webbläsaren.",
     "ext_install_title": "Installera tillägget Utiq Detector"

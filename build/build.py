@@ -274,13 +274,11 @@ def ext_cta(t, variant="hero"):
     app.js bascule vers Firefox si le navigateur est Firefox (les deux stores
     restent toujours accessibles, donc robuste même sans JS / si la détection rate)."""
     u = t["ui"]
-    tpl = u["ext_install_tpl"]
-    label_chrome = tpl.replace("{b}", "Chrome")
     return (
         f'<div class="ext-cta ext-cta-{variant}" data-chrome="{EXT["chrome"]}" '
-        f'data-firefox="{EXT["firefox"]}" data-tpl="{html.escape(tpl)}">'
+        f'data-firefox="{EXT["firefox"]}">'
         f'<a class="btn orange ext-primary" href="{EXT["chrome"]}" target="_blank" rel="noopener">'
-        f'<span class="ext-ico">🧩</span> <span class="ext-label">{html.escape(label_chrome)}</span></a>'
+        f'<span class="ext-ico">🧩</span> <span class="ext-label">{html.escape(u["ext_install"])}</span></a>'
         f'<span class="ext-alt">{html.escape(u["ext_or"])} '
         f'<a class="ext-other" href="{EXT["firefox"]}" target="_blank" rel="noopener">Firefox</a></span>'
         f'</div>'

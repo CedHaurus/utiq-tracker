@@ -42,7 +42,7 @@
     "api_title": "Dataadgang (JSON API)",
     "footer_privacy": "Privatliv Utiq Detector",
     "ext_nav": "Udvidelse",
-    "ext_install_tpl": "Føj til {b}",
+    "ext_install": "Tilføj udvidelsen",
     "ext_or": "eller",
     "ext_hint": "Registrerer Utiq på de sider, du besøger, direkte i din browser.",
     "ext_install_title": "Installer udvidelsen Utiq Detector"

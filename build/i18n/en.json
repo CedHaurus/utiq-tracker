@@ -42,7 +42,7 @@
     "api_title": "Data access (JSON API)",
     "footer_privacy": "Privacy Utiq Detector",
     "ext_nav": "Extension",
-    "ext_install_tpl": "Add to {b}",
+    "ext_install": "Add the extension",
     "ext_or": "or",
     "ext_hint": "Detects Utiq on the sites you visit, right in your browser.",
     "ext_install_title": "Install the Utiq Detector extension"

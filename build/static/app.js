@@ -120,12 +120,9 @@
   document.querySelectorAll(".ext-cta").forEach(function (box) {
     var ff = box.getAttribute("data-firefox");
     var ch = box.getAttribute("data-chrome");
-    var tpl = box.getAttribute("data-tpl") || "{b}";
     var primary = box.querySelector(".ext-primary");
-    var label = box.querySelector(".ext-label");
     var other = box.querySelector(".ext-other");
-    if (primary && ff) primary.href = ff;
-    if (label) label.textContent = tpl.replace("{b}", "Firefox");
+    if (primary && ff) primary.href = ff;          // le store visé, pas le libellé
     if (other && ch) { other.href = ch; other.textContent = "Chrome"; }
   });
 })();

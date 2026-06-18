@@ -42,7 +42,7 @@
     "api_title": "Datenzugang (JSON-API)",
     "footer_privacy": "Datenschutz Utiq Detector",
     "ext_nav": "Erweiterung",
-    "ext_install_tpl": "Zu {b} hinzufügen",
+    "ext_install": "Erweiterung hinzufügen",
     "ext_or": "oder",
     "ext_hint": "Erkennt Utiq auf den von Ihnen besuchten Websites, direkt im Browser.",
     "ext_install_title": "Die Erweiterung Utiq Detector installieren"
