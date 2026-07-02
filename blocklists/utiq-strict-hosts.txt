@@ -194,7 +194,6 @@
 0.0.0.0 utiq.france.tv
 0.0.0.0 utiq.francetv-preprod.fr
 0.0.0.0 utiq.francetv.fr
-0.0.0.0 utiq.frandroid.com
 0.0.0.0 utiq.freundin.de
 0.0.0.0 utiq.ftv-preprod.fr
 0.0.0.0 utiq.fuehrerscheintest-online.de
@@ -400,7 +399,6 @@
 0.0.0.0 utiq.nrj-play.fr
 0.0.0.0 utiq.nrj.fr
 0.0.0.0 utiq.nrpyrenees.fr
-0.0.0.0 utiq.numerama.com
 0.0.0.0 utiq.oberhessische-zeitung.de
 0.0.0.0 utiq.oktoberfest.bayern
 0.0.0.0 utiq.olivemagazine.com

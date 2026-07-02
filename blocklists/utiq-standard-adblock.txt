@@ -169,7 +169,6 @@
 ||utiq.france.tv^
 ||utiq.francetv-preprod.fr^
 ||utiq.francetv.fr^
-||utiq.frandroid.com^
 ||utiq.freundin.de^
 ||utiq.ftv-preprod.fr^
 ||utiq.fuehrerscheintest-online.de^
@@ -368,7 +367,6 @@
 ||utiq.nrj-play.fr^
 ||utiq.nrj.fr^
 ||utiq.nrpyrenees.fr^
-||utiq.numerama.com^
 ||utiq.oberhessische-zeitung.de^
 ||utiq.oktoberfest.bayern^
 ||utiq.olivemagazine.com^

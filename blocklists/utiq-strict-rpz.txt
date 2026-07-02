@@ -196,7 +196,6 @@ utiq.fr.de CNAME .
 utiq.france.tv CNAME .
 utiq.francetv-preprod.fr CNAME .
 utiq.francetv.fr CNAME .
-utiq.frandroid.com CNAME .
 utiq.freundin.de CNAME .
 utiq.ftv-preprod.fr CNAME .
 utiq.fuehrerscheintest-online.de CNAME .
@@ -402,7 +401,6 @@ utiq.notizie.it CNAME .
 utiq.nrj-play.fr CNAME .
 utiq.nrj.fr CNAME .
 utiq.nrpyrenees.fr CNAME .
-utiq.numerama.com CNAME .
 utiq.oberhessische-zeitung.de CNAME .
 utiq.oktoberfest.bayern CNAME .
 utiq.olivemagazine.com CNAME .
