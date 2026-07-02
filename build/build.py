@@ -315,7 +315,7 @@ def card_html(r, t, hidden=False):
 def render_index(t, lang, recs, country_opts, cat_opts, redirect_js):
     u = t["ui"]
     b = base(lang)
-    title = f"Utiq Tracker — {t['tagline']}"
+    title = t.get("meta_title") or f"Utiq Tracker — {t['tagline']}"
     redirect = redirect_js if lang == "fr" else ""
     ld = {
         "@context": "https://schema.org",
