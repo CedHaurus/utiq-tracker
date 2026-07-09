@@ -1,0 +1,17 @@
+name = "utiq-report"
+main = "worker/report-worker.mjs"
+compatibility_date = "2026-07-09"
+workers_dev = true
+routes = [
+  { pattern = "utiq-tracker.online/api/v1/report", zone_name = "utiq-tracker.online" },
+  { pattern = "www.utiq-tracker.online/api/v1/report", zone_name = "utiq-tracker.online" }
+]
+
+[vars]
+SITES_JSON_URL = "https://utiq-tracker.online/api/v1/sites.json"
+MAX_BODY = "1024"
+
+[[d1_databases]]
+binding = "REPORTS_DB"
+database_name = "utiq_reports"
+database_id = "cf63f77f-f3dd-4aa1-814f-c0e6a3f5fa69"

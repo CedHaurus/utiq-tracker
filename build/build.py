@@ -689,6 +689,69 @@ def build_selects(recs, t):
     return cat_opts, country_opts
 
 
+
+
+def write_cloudflare_pages_files():
+    redirects = """/opt-out https://consenthub.utiq.com/ 302
+/index.html / 301
+/privacy-extension.html /privacy-extension 301
+/a-propos.html /about.html 301
+/mentions-legales.html /legal.html 301
+/en/legal-notice.html /en/legal.html 301
+/faq /faq.html 301
+/about /about.html 301
+/legal /legal.html 301
+/api/index.html /api/ 301
+/en/faq /en/faq.html 301
+/en/about /en/about.html 301
+/en/legal /en/legal.html 301
+/de/faq /de/faq.html 301
+/de/about /de/about.html 301
+/de/legal /de/legal.html 301
+/es/faq /es/faq.html 301
+/es/about /es/about.html 301
+/es/legal /es/legal.html 301
+/it/faq /it/faq.html 301
+/it/about /it/about.html 301
+/it/legal /it/legal.html 301
+/pl/faq /pl/faq.html 301
+/pl/about /pl/about.html 301
+/pl/legal /pl/legal.html 301
+/da/faq /da/faq.html 301
+/da/about /da/about.html 301
+/da/legal /da/legal.html 301
+/pt/faq /pt/faq.html 301
+/pt/about /pt/about.html 301
+/pt/legal /pt/legal.html 301
+/sv/faq /sv/faq.html 301
+/sv/about /sv/about.html 301
+/sv/legal /sv/legal.html 301
+"""
+    headers = """/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/api/v1/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, OPTIONS
+  Access-Control-Allow-Headers: Accept, Content-Type
+  Cache-Control: public, max-age=3600
+
+/data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/blocklists/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/assets/*
+  Cache-Control: public, max-age=86400
+"""
+    open(os.path.join(PUB, "_redirects"), "w", encoding="utf-8").write(redirects)
+    open(os.path.join(PUB, "_headers"), "w", encoding="utf-8").write(headers)
+
+
 # ---------------------------------------------------------------------------
 # 8. Orchestration
 # ---------------------------------------------------------------------------
@@ -774,6 +837,8 @@ def main():
              f'<p><a class="btn orange" href="/">{html.escape(u404["back_home"])}</a></p></section></main>')
     p404 += footer(t404, l404)
     open(os.path.join(PUB, "404.html"), "w", encoding="utf-8").write(p404)
+
+    write_cloudflare_pages_files()
 
     print(f"✓ build terminé → {PUB}")
 
