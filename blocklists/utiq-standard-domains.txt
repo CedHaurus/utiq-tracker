@@ -1,5 +1,5 @@
 # Utiq Standard - verified publisher endpoints
-# Entries: 542
+# Entries: 517
 # One exact hostname per line.
 
 utiq.11freunde.de
@@ -23,7 +23,6 @@ utiq.allocine.fr
 utiq.annalect.es
 utiq.apotheken-umschau.de
 utiq.applesfera.com
-utiq.ariase.com
 utiq.ariva.de
 utiq.arquitecturaydiseno.es
 utiq.aufeminin.com
@@ -43,7 +42,6 @@ utiq.bild.de
 utiq.bitban.com
 utiq.blogthinkbig.com
 utiq.brand-demo.com
-utiq.brokser-heiratsmarkt.de
 utiq.buffed.de
 utiq.bunte.de
 utiq.burgosconecta.es
@@ -55,7 +53,6 @@ utiq.bz-berlin.de
 utiq.c7c12669-b77b-4cff-8b74-0aceec09c0c7.com
 utiq.caffeinamagazine.it
 utiq.caminteresse.fr
-utiq.canarias7.es
 utiq.capital.fr
 utiq.caradisiac.com
 utiq.centrepresseaveyron.fr
@@ -83,7 +80,6 @@ utiq.cuisineactuelle.fr
 utiq.cz.de
 utiq.dacia.fr
 utiq.dasgelbeblatt.de
-utiq.degrouptest.com
 utiq.deia.eus
 utiq.derwesten.de
 utiq.desired.de
@@ -109,8 +105,6 @@ utiq.dotscreen.com
 utiq.duden.de
 utiq.dzfoot.com
 utiq.easyvoyage.com
-utiq.eatbetter.de
-utiq.edcom.fr
 utiq.einbuergerungstest-online.de
 utiq.einbuergerungstest-online.eu
 utiq.einfach-tasty.de
@@ -129,7 +123,6 @@ utiq.eleconomista.es
 utiq.elespanol.com
 utiq.elle.de
 utiq.elmueble.com
-utiq.elmundo.es
 utiq.elnacional.cat
 utiq.elnortedecastilla.es
 utiq.elperiodico.cat
@@ -142,13 +135,11 @@ utiq.entrenous.fr
 utiq.epe.es
 utiq.espinof.com
 utiq.esquire.de
-utiq.eulerian.wiki
 utiq.euronews.com
 utiq.europapress.es
 utiq.europapress.tv
 utiq.eventfinder.at
 utiq.eventfinder.de
-utiq.expansion.com
 utiq.extratipp.com
 utiq.familie.de
 utiq.farodevigo.es
@@ -195,7 +186,6 @@ utiq.hallo-muenchen.de
 utiq.hanauer.de
 utiq.handelsblatt.com
 utiq.harpersbazaar.de
-utiq.harpersbazaar.fr
 utiq.haz.de
 utiq.hbrfrance.fr
 utiq.heftig.de
@@ -241,7 +231,6 @@ utiq.lacentrale.fr
 utiq.lachainemeteo.com
 utiq.lacronicabadajoz.com
 utiq.ladepeche.fr
-utiq.lagacetadesalamanca.es
 utiq.lamontagne.fr
 utiq.landeszeitung.de
 utiq.landtiere.de
@@ -275,7 +264,6 @@ utiq.lejournaldelamaison.fr
 utiq.lemessager.fr
 utiq.leonoticias.com
 utiq.lepopulaire.fr
-utiq.lesmobiles.com
 utiq.lesnumeriques.com
 utiq.lest-eclair.fr
 utiq.letelegramme.fr
@@ -294,7 +282,6 @@ utiq.lne.es
 utiq.lunion.fr
 utiq.lvz.de
 utiq.lyonne.fr
-utiq.madmoizelle.com
 utiq.maennerseite.net
 utiq.mahou.es
 utiq.mail.de
@@ -304,7 +291,6 @@ utiq.manager-magazin.de
 utiq.manga-viewer.com
 utiq.mappy.com
 utiq.mappyrecette.com
-utiq.marca.com
 utiq.mariefrance.fr
 utiq.marmiton.org
 utiq.maville.com
@@ -315,7 +301,6 @@ utiq.melty.fr
 utiq.merklespaintech.es
 utiq.merkur.de
 utiq.meteoconsult.es
-utiq.metodomontessori.com
 utiq.midilibre.fr
 utiq.millenium.gg
 utiq.millenium.org
@@ -326,7 +311,6 @@ utiq.mobilite-verte.com
 utiq.modesettravaux.fr
 utiq.moin.de
 utiq.monacomatin.mc
-utiq.mopo.de
 utiq.moto.it
 utiq.motor-talk.de
 utiq.motor1.com
@@ -335,9 +319,7 @@ utiq.motorradfrage.net
 utiq.motorsport-total.com
 utiq.motorsport.com
 utiq.movistar.es
-utiq.mowmag.com
 utiq.mundodeportivo.com
-utiq.mundoxiaomi.com
 utiq.myhomebook.de
 utiq.n-tv.de
 utiq.nationalgeographic.com.es
@@ -355,7 +337,6 @@ utiq.nicematin.com
 utiq.nicematin.net
 utiq.nicotua.de
 utiq.nicotuadev.de
-utiq.noovomoi.ca
 utiq.nordlittoral.fr
 utiq.nostalgie.fr
 utiq.noticiasdealava.eus
@@ -383,7 +364,6 @@ utiq.paruvendu.fr
 utiq.paz-online.de
 utiq.pcgames.de
 utiq.pcgameshardware.de
-utiq.petbook-magazine.com
 utiq.petbook.de
 utiq.petitbleu.fr
 utiq.petitfute.com
@@ -453,7 +433,6 @@ utiq.speakup.es
 utiq.speisekarte.de
 utiq.spektrum.de
 utiq.spiegel.de
-utiq.spielaffe.de
 utiq.sport.es
 utiq.sportbuzzer.de
 utiq.sportlerfrage.net
@@ -483,7 +462,6 @@ utiq.terrafemina.com
 utiq.testfaz.net
 utiq.thenewretail.es
 utiq.thestar.com
-utiq.thewatmag.com
 utiq.thueringen24.de
 utiq.tierfans.net
 utiq.tim.it
@@ -509,7 +487,6 @@ utiq.utest3-prod.work
 utiq.utest3.work
 utiq.utopia.de
 utiq.varmatin.com
-utiq.verisure.fr
 utiq.vetrinamotori.it
 utiq.viaggiamo.it
 utiq.viaoccitanie.tv

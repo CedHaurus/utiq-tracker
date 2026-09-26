@@ -4,7 +4,7 @@ Ces listes bloquent les points d'accès Utiq, pas les sites éditeurs eux-mêmes
 
 ## Niveau recommandé
 
-**Standard** bloque uniquement les sous-domaines Utiq confirmés des 542 sites
+**Standard** bloque uniquement les sous-domaines Utiq confirmés des 519 sites
 actifs recensés, par exemple `utiq.example.com`. C'est le meilleur compromis
 pour les utilisateurs ordinaires.
 

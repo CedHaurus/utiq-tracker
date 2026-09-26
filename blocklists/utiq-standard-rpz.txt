@@ -24,7 +24,6 @@ utiq.allocine.fr CNAME .
 utiq.annalect.es CNAME .
 utiq.apotheken-umschau.de CNAME .
 utiq.applesfera.com CNAME .
-utiq.ariase.com CNAME .
 utiq.ariva.de CNAME .
 utiq.arquitecturaydiseno.es CNAME .
 utiq.aufeminin.com CNAME .
@@ -44,7 +43,6 @@ utiq.bild.de CNAME .
 utiq.bitban.com CNAME .
 utiq.blogthinkbig.com CNAME .
 utiq.brand-demo.com CNAME .
-utiq.brokser-heiratsmarkt.de CNAME .
 utiq.buffed.de CNAME .
 utiq.bunte.de CNAME .
 utiq.burgosconecta.es CNAME .
@@ -56,7 +54,6 @@ utiq.bz-berlin.de CNAME .
 utiq.c7c12669-b77b-4cff-8b74-0aceec09c0c7.com CNAME .
 utiq.caffeinamagazine.it CNAME .
 utiq.caminteresse.fr CNAME .
-utiq.canarias7.es CNAME .
 utiq.capital.fr CNAME .
 utiq.caradisiac.com CNAME .
 utiq.centrepresseaveyron.fr CNAME .
@@ -84,7 +81,6 @@ utiq.cuisineactuelle.fr CNAME .
 utiq.cz.de CNAME .
 utiq.dacia.fr CNAME .
 utiq.dasgelbeblatt.de CNAME .
-utiq.degrouptest.com CNAME .
 utiq.deia.eus CNAME .
 utiq.derwesten.de CNAME .
 utiq.desired.de CNAME .
@@ -110,8 +106,6 @@ utiq.dotscreen.com CNAME .
 utiq.duden.de CNAME .
 utiq.dzfoot.com CNAME .
 utiq.easyvoyage.com CNAME .
-utiq.eatbetter.de CNAME .
-utiq.edcom.fr CNAME .
 utiq.einbuergerungstest-online.de CNAME .
 utiq.einbuergerungstest-online.eu CNAME .
 utiq.einfach-tasty.de CNAME .
@@ -130,7 +124,6 @@ utiq.eleconomista.es CNAME .
 utiq.elespanol.com CNAME .
 utiq.elle.de CNAME .
 utiq.elmueble.com CNAME .
-utiq.elmundo.es CNAME .
 utiq.elnacional.cat CNAME .
 utiq.elnortedecastilla.es CNAME .
 utiq.elperiodico.cat CNAME .
@@ -143,13 +136,11 @@ utiq.entrenous.fr CNAME .
 utiq.epe.es CNAME .
 utiq.espinof.com CNAME .
 utiq.esquire.de CNAME .
-utiq.eulerian.wiki CNAME .
 utiq.euronews.com CNAME .
 utiq.europapress.es CNAME .
 utiq.europapress.tv CNAME .
 utiq.eventfinder.at CNAME .
 utiq.eventfinder.de CNAME .
-utiq.expansion.com CNAME .
 utiq.extratipp.com CNAME .
 utiq.familie.de CNAME .
 utiq.farodevigo.es CNAME .
@@ -196,7 +187,6 @@ utiq.hallo-muenchen.de CNAME .
 utiq.hanauer.de CNAME .
 utiq.handelsblatt.com CNAME .
 utiq.harpersbazaar.de CNAME .
-utiq.harpersbazaar.fr CNAME .
 utiq.haz.de CNAME .
 utiq.hbrfrance.fr CNAME .
 utiq.heftig.de CNAME .
@@ -242,7 +232,6 @@ utiq.lacentrale.fr CNAME .
 utiq.lachainemeteo.com CNAME .
 utiq.lacronicabadajoz.com CNAME .
 utiq.ladepeche.fr CNAME .
-utiq.lagacetadesalamanca.es CNAME .
 utiq.lamontagne.fr CNAME .
 utiq.landeszeitung.de CNAME .
 utiq.landtiere.de CNAME .
@@ -276,7 +265,6 @@ utiq.lejournaldelamaison.fr CNAME .
 utiq.lemessager.fr CNAME .
 utiq.leonoticias.com CNAME .
 utiq.lepopulaire.fr CNAME .
-utiq.lesmobiles.com CNAME .
 utiq.lesnumeriques.com CNAME .
 utiq.lest-eclair.fr CNAME .
 utiq.letelegramme.fr CNAME .
@@ -295,7 +283,6 @@ utiq.lne.es CNAME .
 utiq.lunion.fr CNAME .
 utiq.lvz.de CNAME .
 utiq.lyonne.fr CNAME .
-utiq.madmoizelle.com CNAME .
 utiq.maennerseite.net CNAME .
 utiq.mahou.es CNAME .
 utiq.mail.de CNAME .
@@ -305,7 +292,6 @@ utiq.manager-magazin.de CNAME .
 utiq.manga-viewer.com CNAME .
 utiq.mappy.com CNAME .
 utiq.mappyrecette.com CNAME .
-utiq.marca.com CNAME .
 utiq.mariefrance.fr CNAME .
 utiq.marmiton.org CNAME .
 utiq.maville.com CNAME .
@@ -316,7 +302,6 @@ utiq.melty.fr CNAME .
 utiq.merklespaintech.es CNAME .
 utiq.merkur.de CNAME .
 utiq.meteoconsult.es CNAME .
-utiq.metodomontessori.com CNAME .
 utiq.midilibre.fr CNAME .
 utiq.millenium.gg CNAME .
 utiq.millenium.org CNAME .
@@ -327,7 +312,6 @@ utiq.mobilite-verte.com CNAME .
 utiq.modesettravaux.fr CNAME .
 utiq.moin.de CNAME .
 utiq.monacomatin.mc CNAME .
-utiq.mopo.de CNAME .
 utiq.moto.it CNAME .
 utiq.motor-talk.de CNAME .
 utiq.motor1.com CNAME .
@@ -336,9 +320,7 @@ utiq.motorradfrage.net CNAME .
 utiq.motorsport-total.com CNAME .
 utiq.motorsport.com CNAME .
 utiq.movistar.es CNAME .
-utiq.mowmag.com CNAME .
 utiq.mundodeportivo.com CNAME .
-utiq.mundoxiaomi.com CNAME .
 utiq.myhomebook.de CNAME .
 utiq.n-tv.de CNAME .
 utiq.nationalgeographic.com.es CNAME .
@@ -356,7 +338,6 @@ utiq.nicematin.com CNAME .
 utiq.nicematin.net CNAME .
 utiq.nicotua.de CNAME .
 utiq.nicotuadev.de CNAME .
-utiq.noovomoi.ca CNAME .
 utiq.nordlittoral.fr CNAME .
 utiq.nostalgie.fr CNAME .
 utiq.noticiasdealava.eus CNAME .
@@ -384,7 +365,6 @@ utiq.paruvendu.fr CNAME .
 utiq.paz-online.de CNAME .
 utiq.pcgames.de CNAME .
 utiq.pcgameshardware.de CNAME .
-utiq.petbook-magazine.com CNAME .
 utiq.petbook.de CNAME .
 utiq.petitbleu.fr CNAME .
 utiq.petitfute.com CNAME .
@@ -454,7 +434,6 @@ utiq.speakup.es CNAME .
 utiq.speisekarte.de CNAME .
 utiq.spektrum.de CNAME .
 utiq.spiegel.de CNAME .
-utiq.spielaffe.de CNAME .
 utiq.sport.es CNAME .
 utiq.sportbuzzer.de CNAME .
 utiq.sportlerfrage.net CNAME .
@@ -484,7 +463,6 @@ utiq.terrafemina.com CNAME .
 utiq.testfaz.net CNAME .
 utiq.thenewretail.es CNAME .
 utiq.thestar.com CNAME .
-utiq.thewatmag.com CNAME .
 utiq.thueringen24.de CNAME .
 utiq.tierfans.net CNAME .
 utiq.tim.it CNAME .
@@ -510,7 +488,6 @@ utiq.utest3-prod.work CNAME .
 utiq.utest3.work CNAME .
 utiq.utopia.de CNAME .
 utiq.varmatin.com CNAME .
-utiq.verisure.fr CNAME .
 utiq.vetrinamotori.it CNAME .
 utiq.viaggiamo.it CNAME .
 utiq.viaoccitanie.tv CNAME .

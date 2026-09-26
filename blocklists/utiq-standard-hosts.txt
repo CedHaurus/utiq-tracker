@@ -1,5 +1,5 @@
 # Utiq Standard - verified publisher endpoints
-# Entries: 542
+# Entries: 517
 
 0.0.0.0 utiq.11freunde.de
 0.0.0.0 utiq.20minutos.es
@@ -22,7 +22,6 @@
 0.0.0.0 utiq.annalect.es
 0.0.0.0 utiq.apotheken-umschau.de
 0.0.0.0 utiq.applesfera.com
-0.0.0.0 utiq.ariase.com
 0.0.0.0 utiq.ariva.de
 0.0.0.0 utiq.arquitecturaydiseno.es
 0.0.0.0 utiq.aufeminin.com
@@ -42,7 +41,6 @@
 0.0.0.0 utiq.bitban.com
 0.0.0.0 utiq.blogthinkbig.com
 0.0.0.0 utiq.brand-demo.com
-0.0.0.0 utiq.brokser-heiratsmarkt.de
 0.0.0.0 utiq.buffed.de
 0.0.0.0 utiq.bunte.de
 0.0.0.0 utiq.burgosconecta.es
@@ -54,7 +52,6 @@
 0.0.0.0 utiq.c7c12669-b77b-4cff-8b74-0aceec09c0c7.com
 0.0.0.0 utiq.caffeinamagazine.it
 0.0.0.0 utiq.caminteresse.fr
-0.0.0.0 utiq.canarias7.es
 0.0.0.0 utiq.capital.fr
 0.0.0.0 utiq.caradisiac.com
 0.0.0.0 utiq.centrepresseaveyron.fr
@@ -82,7 +79,6 @@
 0.0.0.0 utiq.cz.de
 0.0.0.0 utiq.dacia.fr
 0.0.0.0 utiq.dasgelbeblatt.de
-0.0.0.0 utiq.degrouptest.com
 0.0.0.0 utiq.deia.eus
 0.0.0.0 utiq.derwesten.de
 0.0.0.0 utiq.desired.de
@@ -108,8 +104,6 @@
 0.0.0.0 utiq.duden.de
 0.0.0.0 utiq.dzfoot.com
 0.0.0.0 utiq.easyvoyage.com
-0.0.0.0 utiq.eatbetter.de
-0.0.0.0 utiq.edcom.fr
 0.0.0.0 utiq.einbuergerungstest-online.de
 0.0.0.0 utiq.einbuergerungstest-online.eu
 0.0.0.0 utiq.einfach-tasty.de
@@ -128,7 +122,6 @@
 0.0.0.0 utiq.elespanol.com
 0.0.0.0 utiq.elle.de
 0.0.0.0 utiq.elmueble.com
-0.0.0.0 utiq.elmundo.es
 0.0.0.0 utiq.elnacional.cat
 0.0.0.0 utiq.elnortedecastilla.es
 0.0.0.0 utiq.elperiodico.cat
@@ -141,13 +134,11 @@
 0.0.0.0 utiq.epe.es
 0.0.0.0 utiq.espinof.com
 0.0.0.0 utiq.esquire.de
-0.0.0.0 utiq.eulerian.wiki
 0.0.0.0 utiq.euronews.com
 0.0.0.0 utiq.europapress.es
 0.0.0.0 utiq.europapress.tv
 0.0.0.0 utiq.eventfinder.at
 0.0.0.0 utiq.eventfinder.de
-0.0.0.0 utiq.expansion.com
 0.0.0.0 utiq.extratipp.com
 0.0.0.0 utiq.familie.de
 0.0.0.0 utiq.farodevigo.es
@@ -194,7 +185,6 @@
 0.0.0.0 utiq.hanauer.de
 0.0.0.0 utiq.handelsblatt.com
 0.0.0.0 utiq.harpersbazaar.de
-0.0.0.0 utiq.harpersbazaar.fr
 0.0.0.0 utiq.haz.de
 0.0.0.0 utiq.hbrfrance.fr
 0.0.0.0 utiq.heftig.de
@@ -240,7 +230,6 @@
 0.0.0.0 utiq.lachainemeteo.com
 0.0.0.0 utiq.lacronicabadajoz.com
 0.0.0.0 utiq.ladepeche.fr
-0.0.0.0 utiq.lagacetadesalamanca.es
 0.0.0.0 utiq.lamontagne.fr
 0.0.0.0 utiq.landeszeitung.de
 0.0.0.0 utiq.landtiere.de
@@ -274,7 +263,6 @@
 0.0.0.0 utiq.lemessager.fr
 0.0.0.0 utiq.leonoticias.com
 0.0.0.0 utiq.lepopulaire.fr
-0.0.0.0 utiq.lesmobiles.com
 0.0.0.0 utiq.lesnumeriques.com
 0.0.0.0 utiq.lest-eclair.fr
 0.0.0.0 utiq.letelegramme.fr
@@ -293,7 +281,6 @@
 0.0.0.0 utiq.lunion.fr
 0.0.0.0 utiq.lvz.de
 0.0.0.0 utiq.lyonne.fr
-0.0.0.0 utiq.madmoizelle.com
 0.0.0.0 utiq.maennerseite.net
 0.0.0.0 utiq.mahou.es
 0.0.0.0 utiq.mail.de
@@ -303,7 +290,6 @@
 0.0.0.0 utiq.manga-viewer.com
 0.0.0.0 utiq.mappy.com
 0.0.0.0 utiq.mappyrecette.com
-0.0.0.0 utiq.marca.com
 0.0.0.0 utiq.mariefrance.fr
 0.0.0.0 utiq.marmiton.org
 0.0.0.0 utiq.maville.com
@@ -314,7 +300,6 @@
 0.0.0.0 utiq.merklespaintech.es
 0.0.0.0 utiq.merkur.de
 0.0.0.0 utiq.meteoconsult.es
-0.0.0.0 utiq.metodomontessori.com
 0.0.0.0 utiq.midilibre.fr
 0.0.0.0 utiq.millenium.gg
 0.0.0.0 utiq.millenium.org
@@ -325,7 +310,6 @@
 0.0.0.0 utiq.modesettravaux.fr
 0.0.0.0 utiq.moin.de
 0.0.0.0 utiq.monacomatin.mc
-0.0.0.0 utiq.mopo.de
 0.0.0.0 utiq.moto.it
 0.0.0.0 utiq.motor-talk.de
 0.0.0.0 utiq.motor1.com
@@ -334,9 +318,7 @@
 0.0.0.0 utiq.motorsport-total.com
 0.0.0.0 utiq.motorsport.com
 0.0.0.0 utiq.movistar.es
-0.0.0.0 utiq.mowmag.com
 0.0.0.0 utiq.mundodeportivo.com
-0.0.0.0 utiq.mundoxiaomi.com
 0.0.0.0 utiq.myhomebook.de
 0.0.0.0 utiq.n-tv.de
 0.0.0.0 utiq.nationalgeographic.com.es
@@ -354,7 +336,6 @@
 0.0.0.0 utiq.nicematin.net
 0.0.0.0 utiq.nicotua.de
 0.0.0.0 utiq.nicotuadev.de
-0.0.0.0 utiq.noovomoi.ca
 0.0.0.0 utiq.nordlittoral.fr
 0.0.0.0 utiq.nostalgie.fr
 0.0.0.0 utiq.noticiasdealava.eus
@@ -382,7 +363,6 @@
 0.0.0.0 utiq.paz-online.de
 0.0.0.0 utiq.pcgames.de
 0.0.0.0 utiq.pcgameshardware.de
-0.0.0.0 utiq.petbook-magazine.com
 0.0.0.0 utiq.petbook.de
 0.0.0.0 utiq.petitbleu.fr
 0.0.0.0 utiq.petitfute.com
@@ -452,7 +432,6 @@
 0.0.0.0 utiq.speisekarte.de
 0.0.0.0 utiq.spektrum.de
 0.0.0.0 utiq.spiegel.de
-0.0.0.0 utiq.spielaffe.de
 0.0.0.0 utiq.sport.es
 0.0.0.0 utiq.sportbuzzer.de
 0.0.0.0 utiq.sportlerfrage.net
@@ -482,7 +461,6 @@
 0.0.0.0 utiq.testfaz.net
 0.0.0.0 utiq.thenewretail.es
 0.0.0.0 utiq.thestar.com
-0.0.0.0 utiq.thewatmag.com
 0.0.0.0 utiq.thueringen24.de
 0.0.0.0 utiq.tierfans.net
 0.0.0.0 utiq.tim.it
@@ -508,7 +486,6 @@
 0.0.0.0 utiq.utest3.work
 0.0.0.0 utiq.utopia.de
 0.0.0.0 utiq.varmatin.com
-0.0.0.0 utiq.verisure.fr
 0.0.0.0 utiq.vetrinamotori.it
 0.0.0.0 utiq.viaggiamo.it
 0.0.0.0 utiq.viaoccitanie.tv
