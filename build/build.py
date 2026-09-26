@@ -31,8 +31,8 @@ GEN_AT = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 YEAR   = datetime.now(timezone.utc).year
 
 # Slugs de page (mêmes noms de fichiers dans toutes les langues)
-PAGE_SLUG = {"list": "/", "faq": "/faq.html", "about": "/about.html",
-             "legal": "/legal.html", "api": "/api/", "privacy": "/privacy-extension"}
+PAGE_SLUG = {"list": "/", "faq": "/faq", "about": "/about",
+             "legal": "/legal", "api": "/api/", "privacy": "/privacy-extension"}
 PAGES = ["list", "faq", "about", "legal", "api", "privacy"]
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"}
@@ -561,7 +561,7 @@ def write_blocklist_index():
 <h1 class="pix">Utiq blocklists</h1>
 <p class="lead">Ready-to-use standard and strict lists for blocking Utiq domains.</p>
 <ul>{links}</ul>
-<p><a href="/faq.html">Documentation and protection guide</a> · <a href="/">Utiq Tracker</a></p>
+<p><a href="/faq">Documentation and protection guide</a> · <a href="/">Utiq Tracker</a></p>
 </section></main>
 </body>
 </html>"""
@@ -695,9 +695,9 @@ def write_cloudflare_pages_files():
     redirects = """/opt-out https://consenthub.utiq.com/ 302
 /index.html / 301
 /privacy-extension.html /privacy-extension 301
-/a-propos.html /about.html 301
-/mentions-legales.html /legal.html 301
-/en/legal-notice.html /en/legal.html 301
+/a-propos.html /about 301
+/mentions-legales.html /legal 301
+/en/legal-notice.html /en/legal 301
 /api/index.html /api/ 301
 """
     headers = """/*
