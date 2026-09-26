@@ -698,34 +698,7 @@ def write_cloudflare_pages_files():
 /a-propos.html /about.html 301
 /mentions-legales.html /legal.html 301
 /en/legal-notice.html /en/legal.html 301
-/faq /faq.html 301
-/about /about.html 301
-/legal /legal.html 301
 /api/index.html /api/ 301
-/en/faq /en/faq.html 301
-/en/about /en/about.html 301
-/en/legal /en/legal.html 301
-/de/faq /de/faq.html 301
-/de/about /de/about.html 301
-/de/legal /de/legal.html 301
-/es/faq /es/faq.html 301
-/es/about /es/about.html 301
-/es/legal /es/legal.html 301
-/it/faq /it/faq.html 301
-/it/about /it/about.html 301
-/it/legal /it/legal.html 301
-/pl/faq /pl/faq.html 301
-/pl/about /pl/about.html 301
-/pl/legal /pl/legal.html 301
-/da/faq /da/faq.html 301
-/da/about /da/about.html 301
-/da/legal /da/legal.html 301
-/pt/faq /pt/faq.html 301
-/pt/about /pt/about.html 301
-/pt/legal /pt/legal.html 301
-/sv/faq /sv/faq.html 301
-/sv/about /sv/about.html 301
-/sv/legal /sv/legal.html 301
 """
     headers = """/*
   X-Content-Type-Options: nosniff
