@@ -1,5 +1,5 @@
 # Utiq Standard - verified publisher endpoints
-# Entries: 517
+# Entries: 531
 
 0.0.0.0 utiq.11freunde.de
 0.0.0.0 utiq.20minutos.es
@@ -15,6 +15,7 @@
 0.0.0.0 utiq.55labs.com
 0.0.0.0 utiq.750g.com
 0.0.0.0 utiq.abc.es
+0.0.0.0 utiq.absolutradio.de
 0.0.0.0 utiq.actu.fr
 0.0.0.0 utiq.actu.net
 0.0.0.0 utiq.aisnenouvelle.fr
@@ -71,6 +72,7 @@
 0.0.0.0 utiq.computerbild.de
 0.0.0.0 utiq.computerfrage.net
 0.0.0.0 utiq.comunidadmsm.es
+0.0.0.0 utiq.congstar.de
 0.0.0.0 utiq.corsematin.com
 0.0.0.0 utiq.courrier-picard.fr
 0.0.0.0 utiq.crossplan-deutschland.de
@@ -78,6 +80,7 @@
 0.0.0.0 utiq.cuisineactuelle.fr
 0.0.0.0 utiq.cz.de
 0.0.0.0 utiq.dacia.fr
+0.0.0.0 utiq.dailymail.co.uk
 0.0.0.0 utiq.dasgelbeblatt.de
 0.0.0.0 utiq.deia.eus
 0.0.0.0 utiq.derwesten.de
@@ -107,6 +110,7 @@
 0.0.0.0 utiq.einbuergerungstest-online.de
 0.0.0.0 utiq.einbuergerungstest-online.eu
 0.0.0.0 utiq.einfach-tasty.de
+0.0.0.0 utiq.einfachbacken.de
 0.0.0.0 utiq.einfachkochen.de
 0.0.0.0 utiq.einfachschoen.me
 0.0.0.0 utiq.elaboratum.com
@@ -145,6 +149,7 @@
 0.0.0.0 utiq.faz.net
 0.0.0.0 utiq.fehmarn24.de
 0.0.0.0 utiq.femmeactuelle.fr
+0.0.0.0 utiq.finanz.de
 0.0.0.0 utiq.finanzfrage.net
 0.0.0.0 utiq.fitbook.de
 0.0.0.0 utiq.fnp.de
@@ -203,6 +208,7 @@
 0.0.0.0 utiq.huelva24.com
 0.0.0.0 utiq.ideal.es
 0.0.0.0 utiq.im-slate.com
+0.0.0.0 utiq.inews.co.uk
 0.0.0.0 utiq.informacion.es
 0.0.0.0 utiq.infosalus.com
 0.0.0.0 utiq.ingame.de
@@ -254,6 +260,7 @@
 0.0.0.0 utiq.le10sport.com
 0.0.0.0 utiq.lebenindeutschland.eu
 0.0.0.0 utiq.leberry.fr
+0.0.0.0 utiq.leboncoin.fr
 0.0.0.0 utiq.lechorepublicain.fr
 0.0.0.0 utiq.leckerschmecker.me
 0.0.0.0 utiq.lecturas.com
@@ -286,6 +293,7 @@
 0.0.0.0 utiq.mail.de
 0.0.0.0 utiq.maison-travaux.fr
 0.0.0.0 utiq.mallorcazeitung.es
+0.0.0.0 utiq.malteskitchen.de
 0.0.0.0 utiq.manager-magazin.de
 0.0.0.0 utiq.manga-viewer.com
 0.0.0.0 utiq.mappy.com
@@ -294,12 +302,14 @@
 0.0.0.0 utiq.marmiton.org
 0.0.0.0 utiq.maville.com
 0.0.0.0 utiq.maz-online.de
+0.0.0.0 utiq.mein-schoener-garten.de
 0.0.0.0 utiq.meine-anzeigenzeitung.de
 0.0.0.0 utiq.mejorconectados.com
 0.0.0.0 utiq.melty.fr
 0.0.0.0 utiq.merklespaintech.es
 0.0.0.0 utiq.merkur.de
 0.0.0.0 utiq.meteoconsult.es
+0.0.0.0 utiq.metro.co.uk
 0.0.0.0 utiq.midilibre.fr
 0.0.0.0 utiq.millenium.gg
 0.0.0.0 utiq.millenium.org
@@ -460,7 +470,11 @@
 0.0.0.0 utiq.terrafemina.com
 0.0.0.0 utiq.testfaz.net
 0.0.0.0 utiq.thenewretail.es
+0.0.0.0 utiq.thescottishsun.co.uk
 0.0.0.0 utiq.thestar.com
+0.0.0.0 utiq.thesun.co.uk
+0.0.0.0 utiq.thesun.ie
+0.0.0.0 utiq.thisismoney.co.uk
 0.0.0.0 utiq.thueringen24.de
 0.0.0.0 utiq.tierfans.net
 0.0.0.0 utiq.tim.it

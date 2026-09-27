@@ -9,7 +9,7 @@
     "CrUX": 21420
   },
   "domains_scanned": 34230,
-  "detections_count": 519,
+  "detections_count": 533,
   "dns_errors": 119,
   "signature": "utiq-aws.net",
   "detections": [
@@ -14217,6 +14217,160 @@
       "category": "Généraliste / autre",
       "country": "International / indéterminé",
       "estimated_date": "2026-06-18",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "leboncoin.fr",
+      "site_name": "leboncoin",
+      "final_url": "https://www.leboncoin.fr/",
+      "description": "Avec leboncoin, trouvez la bonne affaire, réalisez la bonne vente pour votre voiture, immobilier, emploi, location de vacances, vêtements, mode, maison, meubles, jeux vidéo, etc., sur le site référent de petites annonces de particulier à particulier et professionnels",
+      "category": "Commerce et consommation",
+      "country": "France",
+      "estimated_date": "2026-06-16",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "congstar.de",
+      "site_name": "congstar",
+      "final_url": "https://www.congstar.de/",
+      "description": "Mehr fair für dich: ✔ Handytarife ✔ Prepaid ✔ DSL & Glasfaser im besten D-Netz ✔ Mit GB+ jedes Jahr automatisch mehr Datenvolumen.",
+      "category": "Opérateur télécom",
+      "country": "Allemagne",
+      "estimated_date": "2026-08-19",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "absolutradio.de",
+      "site_name": "Absolut Radio",
+      "final_url": "https://www.absolutradio.de/",
+      "description": "Jetzt im Livestream hören! Findet dein absolut das Programm: TOP 2000er, relax, HOT, Germany, Bella, Classics. Auf DAB+ deutschlandweit.",
+      "category": "Radio et audio",
+      "country": "Allemagne",
+      "estimated_date": "2026-06-15",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "einfachbacken.de",
+      "site_name": "Einfach Backen",
+      "final_url": "https://www.einfachbacken.de/",
+      "description": "Bei uns findest du die besten Backrezepte – einfach und so lecker. Mit unseren simplen Schritt-für-Schritt-Anleitungen gelingen sie dir garantiert!",
+      "category": "Cuisine",
+      "country": "Allemagne",
+      "estimated_date": "2026-07-02",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "finanz.de",
+      "site_name": "Finanz.de",
+      "final_url": "https://www.finanz.de/",
+      "description": "Finanz.de Deutschland - Alle Informationen über Finanzen, Steuern, Finanzierungen und Wirtschaft.",
+      "category": "Finance et économie",
+      "country": "Allemagne",
+      "estimated_date": "2026-09-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "malteskitchen.de",
+      "site_name": "Malteskitchen",
+      "final_url": "https://www.malteskitchen.de/",
+      "description": "1200 kostenlose Rezepte zum Kochen & Backen.",
+      "category": "Cuisine",
+      "country": "Allemagne",
+      "estimated_date": "2026-08-06",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "mein-schoener-garten.de",
+      "site_name": "Mein schöner Garten",
+      "final_url": "https://www.mein-schoener-garten.de/",
+      "description": "Bei Mein schöner Garten finden Sie zahlreiche Anregungen zur Gartengestaltung und Gartenarbeit sowie hilfreiche Gartentipps und Pflanzeninformationen.",
+      "category": "Maison et immobilier",
+      "country": "Allemagne",
+      "estimated_date": "2026-07-27",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "thesun.co.uk",
+      "site_name": "The Sun",
+      "final_url": "https://www.thesun.co.uk/",
+      "description": "Get the latest news, exclusives, sport, celebrities, showbiz, politics, business and lifestyle from The Sun",
+      "category": "Actualités et médias",
+      "country": "Royaume-Uni",
+      "estimated_date": "2026-08-26",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "thescottishsun.co.uk",
+      "site_name": "The Scottish Sun",
+      "final_url": "https://www.thescottishsun.co.uk/",
+      "description": "Get the latest Scottish, UK and world news, sport, celebrity gossip, showbiz, politics, business and lifestyle from The Scottish Sun",
+      "category": "Actualités et médias",
+      "country": "Royaume-Uni",
+      "estimated_date": "2026-09-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "dailymail.co.uk",
+      "site_name": "Daily Mail",
+      "final_url": "https://www.dailymail.co.uk/",
+      "description": "UK news, sport, showbiz and opinion from the Daily Mail.",
+      "category": "Actualités et médias",
+      "country": "Royaume-Uni",
+      "estimated_date": "2025-08-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "metro.co.uk",
+      "site_name": "Metro",
+      "final_url": "https://metro.co.uk/",
+      "description": "Metro.co.uk: News, Sport, Showbiz, Celebrities from Metro",
+      "category": "Actualités et médias",
+      "country": "Royaume-Uni",
+      "estimated_date": "2025-08-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "inews.co.uk",
+      "site_name": "The i Paper",
+      "final_url": "https://inews.co.uk/",
+      "description": "The i Paper: Impartial news & intelligent debate",
+      "category": "Actualités et médias",
+      "country": "Royaume-Uni",
+      "estimated_date": "2025-08-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "thisismoney.co.uk",
+      "site_name": "This is Money",
+      "final_url": "https://www.thisismoney.co.uk/money/index.html",
+      "description": "Personal finance and money news from the Daily Mail group.",
+      "category": "Finance et économie",
+      "country": "Royaume-Uni",
+      "estimated_date": "2025-08-18",
+      "date_source": "crt.sh",
+      "loader_confirmed": true
+    },
+    {
+      "domain": "thesun.ie",
+      "site_name": "The Irish Sun",
+      "final_url": "https://www.thesun.ie/",
+      "description": "Get the latest Irish and world news, sport, celebrity gossip, showbiz, pictures, videos, virals and podcasts from The Irish Sun",
+      "category": "Actualités et médias",
+      "country": "Irlande",
+      "estimated_date": "2026-09-18",
+      "date_source": "crt.sh",
       "loader_confirmed": true
     }
   ],

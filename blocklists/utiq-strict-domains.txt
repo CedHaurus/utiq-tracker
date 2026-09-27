@@ -1,5 +1,5 @@
 # Utiq Strict - publishers, operator aliases and infrastructure
-# Entries: 561
+# Entries: 575
 # One exact hostname per line.
 
 a1at.mno.link
@@ -43,6 +43,7 @@ utiq.3djuegospc.com
 utiq.55labs.com
 utiq.750g.com
 utiq.abc.es
+utiq.absolutradio.de
 utiq.actu.fr
 utiq.actu.net
 utiq.aisnenouvelle.fr
@@ -100,6 +101,7 @@ utiq.compradiccion.com
 utiq.computerbild.de
 utiq.computerfrage.net
 utiq.comunidadmsm.es
+utiq.congstar.de
 utiq.corsematin.com
 utiq.courrier-picard.fr
 utiq.crossplan-deutschland.de
@@ -107,6 +109,7 @@ utiq.cuerpomente.com
 utiq.cuisineactuelle.fr
 utiq.cz.de
 utiq.dacia.fr
+utiq.dailymail.co.uk
 utiq.dasgelbeblatt.de
 utiq.deia.eus
 utiq.derwesten.de
@@ -136,6 +139,7 @@ utiq.easyvoyage.com
 utiq.einbuergerungstest-online.de
 utiq.einbuergerungstest-online.eu
 utiq.einfach-tasty.de
+utiq.einfachbacken.de
 utiq.einfachkochen.de
 utiq.einfachschoen.me
 utiq.elaboratum.com
@@ -174,6 +178,7 @@ utiq.farodevigo.es
 utiq.faz.net
 utiq.fehmarn24.de
 utiq.femmeactuelle.fr
+utiq.finanz.de
 utiq.finanzfrage.net
 utiq.fitbook.de
 utiq.fnp.de
@@ -232,6 +237,7 @@ utiq.hoy.es
 utiq.huelva24.com
 utiq.ideal.es
 utiq.im-slate.com
+utiq.inews.co.uk
 utiq.informacion.es
 utiq.infosalus.com
 utiq.ingame.de
@@ -286,6 +292,7 @@ utiq.le-pays.fr.cdn.cloudflare.net
 utiq.le10sport.com
 utiq.lebenindeutschland.eu
 utiq.leberry.fr
+utiq.leboncoin.fr
 utiq.lechorepublicain.fr
 utiq.lechorepublicain.fr.cdn.cloudflare.net
 utiq.leckerschmecker.me
@@ -322,6 +329,7 @@ utiq.mahou.es
 utiq.mail.de
 utiq.maison-travaux.fr
 utiq.mallorcazeitung.es
+utiq.malteskitchen.de
 utiq.manager-magazin.de
 utiq.manga-viewer.com
 utiq.mappy.com
@@ -330,12 +338,14 @@ utiq.mariefrance.fr
 utiq.marmiton.org
 utiq.maville.com
 utiq.maz-online.de
+utiq.mein-schoener-garten.de
 utiq.meine-anzeigenzeitung.de
 utiq.mejorconectados.com
 utiq.melty.fr
 utiq.merklespaintech.es
 utiq.merkur.de
 utiq.meteoconsult.es
+utiq.metro.co.uk
 utiq.midilibre.fr
 utiq.millenium.gg
 utiq.millenium.org
@@ -496,7 +506,11 @@ utiq.telva.com
 utiq.terrafemina.com
 utiq.testfaz.net
 utiq.thenewretail.es
+utiq.thescottishsun.co.uk
 utiq.thestar.com
+utiq.thesun.co.uk
+utiq.thesun.ie
+utiq.thisismoney.co.uk
 utiq.thueringen24.de
 utiq.tierfans.net
 utiq.tim.it

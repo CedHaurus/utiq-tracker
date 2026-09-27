@@ -1,6 +1,6 @@
 ! Title: Utiq Standard - verified publisher endpoints
 ! Updated: 2026-06-12T16:16:03+00:00
-! Entries: 517
+! Entries: 531
 ! Source: public DNS verification of Utiq CNAME integrations
 ! Homepage: utiq-world-report.md
 !
@@ -18,6 +18,7 @@
 ||utiq.55labs.com^
 ||utiq.750g.com^
 ||utiq.abc.es^
+||utiq.absolutradio.de^
 ||utiq.actu.fr^
 ||utiq.actu.net^
 ||utiq.aisnenouvelle.fr^
@@ -74,6 +75,7 @@
 ||utiq.computerbild.de^
 ||utiq.computerfrage.net^
 ||utiq.comunidadmsm.es^
+||utiq.congstar.de^
 ||utiq.corsematin.com^
 ||utiq.courrier-picard.fr^
 ||utiq.crossplan-deutschland.de^
@@ -81,6 +83,7 @@
 ||utiq.cuisineactuelle.fr^
 ||utiq.cz.de^
 ||utiq.dacia.fr^
+||utiq.dailymail.co.uk^
 ||utiq.dasgelbeblatt.de^
 ||utiq.deia.eus^
 ||utiq.derwesten.de^
@@ -110,6 +113,7 @@
 ||utiq.einbuergerungstest-online.de^
 ||utiq.einbuergerungstest-online.eu^
 ||utiq.einfach-tasty.de^
+||utiq.einfachbacken.de^
 ||utiq.einfachkochen.de^
 ||utiq.einfachschoen.me^
 ||utiq.elaboratum.com^
@@ -148,6 +152,7 @@
 ||utiq.faz.net^
 ||utiq.fehmarn24.de^
 ||utiq.femmeactuelle.fr^
+||utiq.finanz.de^
 ||utiq.finanzfrage.net^
 ||utiq.fitbook.de^
 ||utiq.fnp.de^
@@ -206,6 +211,7 @@
 ||utiq.huelva24.com^
 ||utiq.ideal.es^
 ||utiq.im-slate.com^
+||utiq.inews.co.uk^
 ||utiq.informacion.es^
 ||utiq.infosalus.com^
 ||utiq.ingame.de^
@@ -257,6 +263,7 @@
 ||utiq.le10sport.com^
 ||utiq.lebenindeutschland.eu^
 ||utiq.leberry.fr^
+||utiq.leboncoin.fr^
 ||utiq.lechorepublicain.fr^
 ||utiq.leckerschmecker.me^
 ||utiq.lecturas.com^
@@ -289,6 +296,7 @@
 ||utiq.mail.de^
 ||utiq.maison-travaux.fr^
 ||utiq.mallorcazeitung.es^
+||utiq.malteskitchen.de^
 ||utiq.manager-magazin.de^
 ||utiq.manga-viewer.com^
 ||utiq.mappy.com^
@@ -297,12 +305,14 @@
 ||utiq.marmiton.org^
 ||utiq.maville.com^
 ||utiq.maz-online.de^
+||utiq.mein-schoener-garten.de^
 ||utiq.meine-anzeigenzeitung.de^
 ||utiq.mejorconectados.com^
 ||utiq.melty.fr^
 ||utiq.merklespaintech.es^
 ||utiq.merkur.de^
 ||utiq.meteoconsult.es^
+||utiq.metro.co.uk^
 ||utiq.midilibre.fr^
 ||utiq.millenium.gg^
 ||utiq.millenium.org^
@@ -463,7 +473,11 @@
 ||utiq.terrafemina.com^
 ||utiq.testfaz.net^
 ||utiq.thenewretail.es^
+||utiq.thescottishsun.co.uk^
 ||utiq.thestar.com^
+||utiq.thesun.co.uk^
+||utiq.thesun.ie^
+||utiq.thisismoney.co.uk^
 ||utiq.thueringen24.de^
 ||utiq.tierfans.net^
 ||utiq.tim.it^

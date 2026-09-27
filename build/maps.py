@@ -48,6 +48,7 @@ COUNTRY_META = {
     "Portugal":                   ("PT", "🇵🇹"),
     "Suisse":                     ("CH", "🇨🇭"),
     "Suède":                      ("SE", "🇸🇪"),
+    "Irlande":                    ("IE", "🇮🇪"),
     "International / indéterminé": ("INT", "🌐"),
 }
 COUNTRY_FALLBACK = ("INT", "🌐")
